@@ -80,85 +80,86 @@ I ket possono essere rappresentati anche come vettori colonna:
             </p>
             <h3>Bra</h3>
             <p>
-                Il complesso coniugato di un ket si chiama bra e si indica:
+                Il complesso comiugato di un ket si chiama bra e si indica:
                 $$ \langle A | $$
+                I bra soddisfano gli stessi assiomi dei ket. <br>
 
+                Occorre però tenere presente alcuni punti:
+                $$ z| A \rangle \;\; z \in C  $$
+                corrisponde a:
+                $$ \langle A |z^*$$
+
+                se rappresentiamp il ket come vettore colonna abbiamo:
+                $$  | A \rangle =
+                \begin{pmatrix}
+                \alpha_1\\
+                \alpha_2\\
+                \alpha_3\\
+                \end{pmatrix}
+                $$
+
+                Il bra corrispondente è:
+
+                $$ \langle A |=
+                \begin{pmatrix}
+                \alpha_1^* \
+                \alpha_2^* \
+                \alpha_3^* \
+                \end{pmatrix}
+                $$
             <p>
+            <h3>Prodotto interno tra ket</h3>
+            <p>
+                Nello spazio tridimensionale è definito il prodotto scalare, definiamo un analogo prodotto interno tra i ket.
+                $$ | A \rangle \cdot  | B \rangle = \langle B |A \rangle = w$$                
+                Il risultato è un numero complesso.
+                In forma vettoriale abbiamo:
+
+                $$  \langle B |A \rangle = 
+                \begin{pmatrix}
+                \beta_1^* \
+                \beta_2^* \
+                \beta_3^* \
+                \end{pmatrix}
+                \begin{pmatrix}
+                \alpha_1\\
+                \alpha_2\\
+                \alpha_3\\
+                \end{pmatrix}
+                =
+                \beta_1^* \alpha_1+\beta_2^* \alpha_2+\beta_3^* \alpha_3\
+                $$      
+                Proprietà:
+
+                $$   | A \rangle+ | B    \rangle  \to  \langle A | + \langle B | $$
+
+                $$  \langle C| ( |A\rangle + |B\rangle ) = \langle C |A\rangle + \langle C |B\rangle $$
+                $$ \langle A |B\rangle ^ * = \langle B |A\rangle $$
+                $$ \langle A |B\rangle  = 0 \to sono - ortogonali $$
+            </p>
+
+            <h3>Base</h3>
+            <p>
+                Data una base:
+                $$|a_1\rangle,|a_2\rangle,...,|a_N\rangle $$
+                scriviamo un ket come:
+
+                $$   | A \rangle = \sum_{i=1}^N \alpha_i |a_i \rangle  $$
+                $$ \alpha_j  = \langle a_j |A\rangle  = \sum_{i=1}^N \alpha_i  \langle a_j|a_i \rangle $$
+                essendo
+                $$ \langle a_j  | a_i \rangle = 1 \iff  i=j  $$
+                $$ \langle a_j  | a_i \rangle = 0 \iff  i \neq j  $$
+                $$ \langle a_j  | a_i \rangle = 0 \iff  i \neq j  $$
+            </p>
+
 
         </article>
-        
+
+        <!-- --------------------------------------------- -->        
+        <!-- --------------------------------------------- -->
         <hr>
-        $$ \langle \sigma \rangle = \vec z\ \cdot \vec n\ $$
-        $$ \langle \sigma \rangle  $$
-        $$ | a \rangle $$
-        $$ \vert \phi \rangle $$
-        $$ \vert \hat{A} \rangle $$
-        $$
-        \begin{pmatrix}
-        1 & x & x^2 \\
-        1 & y & y^2 \\
-        1 & z & z^2 \\
-        \end{pmatrix}
-        $$
-
-        $$ \langle A | $$
-
-
-        $$
-        \begin{bmatrix}
-            0 & 1\\ 
-            0 & 0 
-        \end{bmatrix}
-        \times
-        \begin{bmatrix}
-            0 & 0\\ 
-            1 & 0  
-        \end{bmatrix}
-         =
-        \begin{bmatrix}
-            1 & 0\\ 
-            0 & 0   
-        \end{bmatrix}
-     $$ 
-
-    $$
-        \begin{bmatrix}
-            0 & 1\\ 
-            0 & 0 
-        \end{bmatrix}        
-        \begin{bmatrix}
-            0\\ 
-            1  
-        \end{bmatrix}
-         =
-        \begin{bmatrix}
-            1 & 0\\ 
-            0 & 0   
-        \end{bmatrix}
-    $$ 
-     
-    $$
-        \begin{bmatrix}
-            a & b\\ 
-            c & d 
-        \end{bmatrix}        
-        \begin{bmatrix}
-            x\\ 
-            y  
-        \end{bmatrix}
-         =
-        x\begin{bmatrix}
-            a \\ 
-            c   
-        \end{bmatrix}
-        +
-        y\begin{bmatrix}
-            b \\ 
-            d  
-        \end{bmatrix}       
-    $$ 
-
-
+        <hr>
+        
     </main>
 
 
@@ -166,4 +167,3 @@ I ket possono essere rappresentati anche come vettori colonna:
     <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
     
 </body>
-
