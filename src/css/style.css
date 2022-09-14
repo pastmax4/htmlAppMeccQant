@@ -20,5 +20,9 @@ th, td, caption {
 
 p {
      font-family: Verdana, Helvetica, sans-serif;
- }
+}
  
+p.riquadro {
+    font-family: Verdana, Helvetica, sans-serif;
+    border: 2px solid rgb(22, 214, 105);
+}
