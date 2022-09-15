@@ -19,8 +19,21 @@ th, td, caption {
 }
 
 p {
-     font-family: Verdana, Helvetica, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
+    margin: 2px auto;
 }
+
+h4 {
+    font-family: Verdana, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+.maxP {
+    font-family: Verdana, Helvetica, sans-serif;
+    margin: 0 auto;
+    border: 2px solid rgb(78, 167, 5);
+    padding: 20px;
+  }
  
 p.riquadro {
     font-family: Verdana, Helvetica, sans-serif;
