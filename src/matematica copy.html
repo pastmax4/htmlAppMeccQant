@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+    https://www.physicsread.com/latex-ket-notation/
+
+-->
+<body>
+    <head>
+        <h1>Concetti matematici</h1>
+        <p>
+            Leonard Susskind, Art Friedman - Meccanica quantistica - Pag.18</p>
+        </p>
+    </head>
+    <hr>
+    <main>
+        <article id="spazioVettoriale">        
+            <p> 
+                Gli spazi vettoriali utilizzati per definire gli stati quantistici sono <span style="font-style: italic"> spazi di Hilbert. </span> 
+            </p>
+            <div>
+                <br>                           
+                <p  class="maxP">    
+                    Hilbert space <br>            
+                    A Hilbert space H is a real or complex inner product space that is also  a <b> complete metric space </b> with respect to the distance function induced by the inner product.
+                </p>
+            </div>
+    
+            <div>
+                <br>
+                <p  class="maxP">                  
+                    Complete metric space <br>
+                    In mathematical analysis, a metric space M is called <b> complete </b>(or a Cauchy space) if every Cauchy sequence of points in M has a limit that is also in M. <br>
+                    Intuitively, a space is complete if there are no "points missing" from it (inside or at the boundary). <br>
+                    For instance, the set of rational numbers is not complete,                 
+                    because e.g. \( \sqrt {2}\ \) is "missing" from it, even though one can construct a Cauchy 
+                    sequence of rational numbers that converges to it.  It is always possible to "fill all the holes", 
+                    leading to the completion of a given space.
+                </p>
+            </div>
+            
+        </article>
+
+        <article id="ketBra">
+            <h3>Ket</h3>
+            <p>
+                I vettori in meccanica quantistica si chiamano ket si indicano con:
+                $$ | A \rangle $$
+                ecco gli assiomi
+                $$ | A \rangle + | B \rangle = | C \rangle  $$
+                $$ | A \rangle + | B \rangle = | B \rangle + | A \rangle $$
+                $$ (| A \rangle + | B \rangle )  + | C \rangle  = | A \rangle + ( | B \rangle   + | C \rangle ) $$
+                $$ | A \rangle +0 = | A \rangle  $$
+                $$ | A \rangle + ( -| A \rangle) = 0  $$
+                $$ |z A \rangle = z| A \rangle \;\; z \in C  $$
+                $$ z(| A \rangle + | B \rangle ) = z| A \rangle + z| B \rangle  $$
+                $$  | A \rangle (w+z) =  | A \rangle w+ | A \rangle z  $$
+
+I ket possono essere rappresentati anche come vettori colonna:
+                $$  | A \rangle =
+                \begin{pmatrix}
+                \alpha_1 \\
+                \alpha_2 \\
+                \alpha_3 \\
+                \end{pmatrix}
+                $$
+            </p>
+            <h3>Bra</h3>
+            <p>
+                Il complesso coniugato di un ket si chiama bra e si indica:
+                $$ \langle A | $$
+
+            <p>
+
+        </article>
+        
+        <hr>
+        $$ \langle \sigma \rangle = \vec z\ \cdot \vec n\ $$
+        $$ \langle \sigma \rangle  $$
+        $$ | a \rangle $$
+        $$ \vert \phi \rangle $$
+        $$ \vert \hat{A} \rangle $$
+        $$
+        \begin{pmatrix}
+        1 & x & x^2 \\
+        1 & y & y^2 \\
+        1 & z & z^2 \\
+        \end{pmatrix}
+        $$
+
+        $$ \langle A | $$
+
+
+        $$
+        \begin{bmatrix}
+            0 & 1\\ 
+            0 & 0 
+        \end{bmatrix}
+        \times
+        \begin{bmatrix}
+            0 & 0\\ 
+            1 & 0  
+        \end{bmatrix}
+         =
+        \begin{bmatrix}
+            1 & 0\\ 
+            0 & 0   
+        \end{bmatrix}
+     $$ 
+
+    $$
+        \begin{bmatrix}
+            0 & 1\\ 
+            0 & 0 
+        \end{bmatrix}        
+        \begin{bmatrix}
+            0\\ 
+            1  
+        \end{bmatrix}
+         =
+        \begin{bmatrix}
+            1 & 0\\ 
+            0 & 0   
+        \end{bmatrix}
+    $$ 
+     
+    $$
+        \begin{bmatrix}
+            a & b\\ 
+            c & d 
+        \end{bmatrix}        
+        \begin{bmatrix}
+            x\\ 
+            y  
+        \end{bmatrix}
+         =
+        x\begin{bmatrix}
+            a \\ 
+            c   
+        \end{bmatrix}
+        +
+        y\begin{bmatrix}
+            b \\ 
+            d  
+        \end{bmatrix}       
+    $$ 
+
+    $$ \langle \sigma \rangle = \vec z\ \cdot \vec n\ $$
+    $$ \langle \sigma \rangle  $$
+    $$ | a \rangle $$
+    $$ \vert \phi \rangle $$
+    $$ \vert \hat{A} \rangle $$
+    $$
+    \begin{pmatrix}
+    1 & x & x^2 \\
+    1 & y & y^2 \\
+    1 & z & z^2 \\
+    \end{pmatrix}
+    $$
+
+    $$ \langle A | z^*$$
+
+	
+    $$\bar{x}  $$
+
+    $$\overline{x} $$
+
+    $$  \to \gets \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto \implies \iff  $$
+
+    $$  \lt \gt \le \ge \neq  $$ 
+
+    $$\times \div \pm \mp $$
+
+    $$  | r \rangle = \sqrt{x^3} $$
+    </main>
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>
+
