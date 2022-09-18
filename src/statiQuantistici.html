@@ -81,7 +81,7 @@
             
         </article>
 
-        <article id="Lungo x">      
+        <article id="Lungo +x">      
             <h3>Lungo l'asse x</h3>  
             <p> 
                 Supponiamo di preparare il sistema con spin nello stato  \(  | r \rangle \). Cioè misuriamo lo spin con 
@@ -101,10 +101,63 @@
 
                 $$    \langle u  | d \rangle =0 $$
         
-                pag32
+                la probabilità è:
+
+                $$  p = \langle u   | r \rangle \langle u   | r \rangle ^*= 1/2 $$
+
                 </p>  
         </article>      
-    
+
+        <article id="Lungo -x">      
+            <h3>Lungo l'asse -x</h3>  
+            <p> 
+                Supponiamo di preparare il sistema con spin nello stato  \(  | l \rangle \). Cioè misuriamo lo spin con 
+                l'apparato A lungo x ed otteniamo -1. <br>
+                Usiamo ancora \(  | u \rangle, | d \rangle  \) come base. <br>
+                Se ruotiamo A lungo z, la probabilità di trovare lo spin +1 o -1 è sempre la stessa pari a 1/2. <br>
+                Se usiamo la strada fatta per +x avremo per \(  | l \rangle \)  la stessa espressione trovata per \(  | r \rangle \). <br>
+                Dobbiamo aggiungere altre condizioni, usiamo:
+
+                $$    \langle r  | l \rangle =0    \tag{1} $$
+
+                $$    \langle l  | r \rangle =0    \tag{2} $$
+
+                Facciamo i calcoli:
+
+                $$  | l \rangle = \beta_u | u \rangle + \beta_d | d \rangle  $$
+                $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$
+                $$    \langle r  | l \rangle =    \langle r  | (   \beta_u | u \rangle + \beta_d | d \rangle )=      $$
+                $$    = (\frac{1}{\sqrt{2}}  \langle u | + \frac{1}{\sqrt{2}} \langle d | )   (   \beta_u | u \rangle + \beta_d | d \rangle )   $$
+
+                I fattori 
+                $$    \langle u  | d \rangle =0 $$
+
+                rimangono solo:
+                $$    = \frac{1}{\sqrt{2}} \beta_u  \langle u |  u \rangle  \frac{1}{\sqrt{2}} \beta_d  \langle d |  d \rangle =0 $$
+                $$    \langle u  | u \rangle =1 $$
+                $$    \langle d  | d \rangle =1 $$
+                $$    \frac{1}{\sqrt{2}} \beta_u +  \frac{1}{\sqrt{2}} \beta_d   =0 $$
+                $$     \beta_u = -  \beta_d   $$
+
+                Naturalmente vale sempre la condizione che le probabilità di trovare lo spin +1 o - 1 sia pari a 1/2
+                perciò:
+
+                $$     \beta_u  \beta_u ^* = \beta_d  \beta_d ^* = 1/2   $$
+
+                in conclusione
+
+                $$  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  $$
+
+
+                </p>  
+        </article>      
+        <article id="Lungo +y">      
+            <h3>Lungo l'asse -x</h3>  
+            <p> 
+pag33
+            </p>  
+        </article>   
+        
         <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->
         <hr>
