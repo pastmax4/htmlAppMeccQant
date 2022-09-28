@@ -280,20 +280,56 @@
                 \end{pmatrix}=
                 v_1^*q_1+v_2^*q_2                
                 $$
-                In general:
+
+                In general the standard inner product is:
                 $$  \langle a |b \rangle  = \sum_{i=1}^N a_i^*b_i  $$
 
-
-Pag.15
-
-
+                and so:
+                $$   |v \rangle =  a|0 \rangle + b |1 \rangle   $$
+                $$  \langle 0|1 \rangle  = 0  $$
+                $$  \langle 0|0 \rangle  = 1  $$
+                $$  \langle 1|1 \rangle  = 1  $$
+                $$  \langle 0|v \rangle  = a  $$
+                $$  \langle 1|v \rangle  = b  $$
+                $$  | 0 \rangle =
+                \begin{pmatrix}
+                1\\
+                0\\
+                \end{pmatrix}
+                $$
+                $$  | 1 \rangle =
+                \begin{pmatrix}
+                0\\
+                1\\
+                \end{pmatrix}
+                $$
+                $$  | v \rangle =
+                \begin{pmatrix}
+                a\\
+                b\\
+                \end{pmatrix}
+                $$
             </p>
         </article>
 
+        <h3>Measurements of single-qubit systems</h3>  
+        <article id="Measurements of single-qubit systems">      
+            <p>
+                Quantum theory postulates that any device that measures a two-state quantum system must have
+                two preferred states that form an orthonormal basis for the associated vector space:
 
+                $$ \{  u, u_{\bot }  \}$$
+                $$ |v \rangle =  a|u \rangle + b |u_{\bot } \rangle   $$
 
+                Measurement of a state transforms the state into one of the measuring
+                device’s associated basis vectors  \(   u, u_{\bot }  \);
+                
+                the state \(   |v \rangle  \) is measured as  \(|u \rangle \) with probability \(   a^2  \) and
+                as  \(  |u_{\bot }  \rangle  \) with probability \(   b^2  \)
+                
 
-
+            </p>
+        </article>
 
         <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->
