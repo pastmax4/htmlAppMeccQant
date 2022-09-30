@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+    https://www.physicsread.com/latex-ket-notation/
+
+-->
+<body>
+    <head>
+        <h1>Stati Quantistici </h1>
+        <p>
+            Leonard Susskind, Art Friedman - Meccanica quantistica - Pag.27</p>
+        </p>
+    </head>
+    <hr>
+    <main>
+        <article id="stato">      
+            <h3>Stato</h3>  
+            <p> 
+                In fisica classica se si conosce lo stato di un sistema si può calcolare l'evoluzione degli stati successivi. <br> 
+                In meccanica quantistica conoscere lo stato significa conoscere ciò che possibile sapere dal modo in cui il sistema è stato preparato (misura).
+            </p>        
+
+            <h3>Rappresentazione dello stato di spin</h3>  
+            <p> 
+                L'apparto di misura <span style="font-style: italic"> A </span> consente di misurare lo spin; è orientato lungo l'asse z. 
+                I due stati possibili che possono essere preparati sono:
+                $$ \sigma_z= \pm 1$$
+                che possiamo identificare in questo modo:
+                $$  +1 \to |u\rangle \to Up  $$
+                $$  -1 \to |d\rangle \to Down  $$
+
+                Lungo l'asse x:
+                $$  +1 \to | r\rangle \to Right  $$
+                $$  -1 \to |l\rangle \to Left  $$
+
+                Lungo l'asse y:
+                $$  +1 \to |o\rangle \to Out  $$
+                $$  -1 \to |i\rangle \to In  $$
+                <figure>
+                    <img src="img/xyz.jpg" alt="xyz" title="Sistema di riferimento." width="254" height="212">
+                    <figcaption>
+                        Fig. Misura dello spin
+                    </figcaption>
+                </figure>
+
+                Lo spazio è <b> bidimensionale </b>. <br>
+                Una base in questo spazio può essere data da:  \(   |u\rangle \ , |d\rangle \  \)
+                infatti i due ket sono mutualmente esclusivi e quindi sono linearmente indipendenti.
+                Un generico stato può essere rappresentato in questo modo:
+                $$ | A \rangle = \alpha_u  |u\rangle + \alpha_d  |d\rangle $$
+
+                $$  \langle u| A \rangle = \alpha_u  $$
+                $$  \langle d| A \rangle = \alpha_d  $$
+                $$  \langle u| d \rangle  =0  $$
+
+                \(   |A\rangle \  \)  rappresenta tutti gli stati di spin possibili. <br>
+                Se l'apparato di misura è orientato lungo z allora: <br>
+
+                <ul>
+                    <li>  \(  \alpha_u  \alpha_u^*  =  \)  probabilità che la misura dello spin sia +1  stato up</li>
+                    <li>  \(  \alpha_d  \alpha_d^*  =  \)  probabilità che la misura dello spin sia -1  stato down</li>
+                    <li>  \(  \alpha_u  \alpha_u^* +  \alpha_d  \alpha_d^*  =  1 \)  </li>
+                    
+                </ul> 
+
+            </p>        
+            
+        </article>
+
+        <article id="Lungo +x">      
+            <h3>Lungo l'asse x</h3>  
+            <p> 
+                Supponiamo di preparare il sistema con spin nello stato  \(  | r \rangle \). Cioè misuriamo lo spin con 
+                l'apparato A lungo +x. <br>
+                Siccome \(  | u \rangle, | d \rangle  \) formano una base possiamo chiederci come esprimere \(  | r \rangle \)
+                con  \(  | u \rangle, | d \rangle  \). <br>
+                Se ruotiamo A lungo z la probabilità di trovare lo spin up o down è la stessa pari cioè a 1/2.
+                Possiamo esprimere questo scrivendo:
+
+                $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$
+
+                infatti
+
+                $$  \langle u   | r \rangle = \frac{1}{\sqrt{2}}  \langle u  | u \rangle + \frac{1}{\sqrt{2}}  \langle u  | d \rangle =  \frac{1}{\sqrt{2}} $$
+
+                $$    \langle u  | u \rangle =1 $$
+
+                $$    \langle u  | d \rangle =0 $$
+        
+                la probabilità è:
+
+                $$  p = \langle u   | r \rangle \langle u   | r \rangle ^*= 1/2 $$
+
+                </p>  
+        </article>      
+
+        <article id="Lungo -x">      
+            <h3>Lungo l'asse -x</h3>  
+            <p> 
+                Supponiamo di preparare il sistema con spin nello stato  \(  | l \rangle \). Cioè misuriamo lo spin con 
+                l'apparato A lungo x ed otteniamo -1. <br>
+                Usiamo ancora \(  | u \rangle, | d \rangle  \) come base. <br>
+                Se ruotiamo A lungo z, la probabilità di trovare lo spin +1 o -1 è sempre la stessa pari a 1/2. <br>
+                Se usiamo la strada fatta per +x avremo per \(  | l \rangle \)  la stessa espressione trovata per \(  | r \rangle \). <br>
+                Dobbiamo aggiungere altre condizioni, usiamo:
+
+                $$    \langle r  | l \rangle =0    \tag{1} $$
+
+                $$    \langle l  | r \rangle =0    \tag{2} $$
+
+                Facciamo i calcoli:
+
+                $$  | l \rangle = \beta_u | u \rangle + \beta_d | d \rangle  $$
+                $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$
+                $$    \langle r  | l \rangle =    \langle r  | (   \beta_u | u \rangle + \beta_d | d \rangle )=      $$
+                $$    = (\frac{1}{\sqrt{2}}  \langle u | + \frac{1}{\sqrt{2}} \langle d | )   (   \beta_u | u \rangle + \beta_d | d \rangle )   $$
+
+                I fattori 
+                $$    \langle u  | d \rangle =0 $$
+
+                rimangono solo:
+                $$    = \frac{1}{\sqrt{2}} \beta_u  \langle u |  u \rangle  \frac{1}{\sqrt{2}} \beta_d  \langle d |  d \rangle =0 $$
+                $$    \langle u  | u \rangle =1 $$
+                $$    \langle d  | d \rangle =1 $$
+                $$    \frac{1}{\sqrt{2}} \beta_u +  \frac{1}{\sqrt{2}} \beta_d   =0 $$
+                $$     \beta_u = -  \beta_d   $$
+
+                Naturalmente vale sempre la condizione che le probabilità di trovare lo spin +1 o - 1 sia pari a 1/2
+                perciò:
+
+                $$     \beta_u  \beta_u ^* = \beta_d  \beta_d ^* = 1/2   $$
+
+                in conclusione
+
+                $$  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  $$
+
+
+            </p>  
+        </article>      
+        <article id="Lungo +y">      
+            <h3>Lungo l'asse +y</h3>  
+            <p> 
+                Lo soin è orientito lungo +y e viene poi orientato lungo z
+
+
+            </p>  
+        </article>   
+        
+        <!-- --------------------------------------------- -->        
+        <!-- --------------------------------------------- -->
+        <hr>
+        <hr>
+        
+    </main>
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>
