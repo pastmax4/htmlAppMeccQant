@@ -36,14 +36,14 @@
 
             <h3>Rappresentazione dello stato di spin</h3>  
             <p> 
-                L'apparto di misura <span style="font-style: italic"> A </span> consente di misurare lo spin; è orientato lungo l'asse z. 
+                L'apparto di misura <span style="font-style: italic"> A </span> consente di misurare lo spin; A è orientato lungo l'asse z. 
                 I due stati possibili che possono essere preparati sono:
                 $$ \sigma_z= \pm 1$$
                 che possiamo identificare in questo modo:
                 $$  +1 \to |u\rangle \to Up  $$
                 $$  -1 \to |d\rangle \to Down  $$
 
-                Lungo l'asse x:
+                Lungo l'asse x lo spin piò essere:
                 $$  +1 \to | r\rangle \to Right  $$
                 $$  -1 \to |l\rangle \to Left  $$
 
@@ -57,7 +57,7 @@
                     </figcaption>
                 </figure>
 
-                Lo spazio è <b> bidimensionale </b>. <br>
+                Lo spazio  degli stati di spin è <b> bidimensionale</b>. <br>
                 Una base in questo spazio può essere data da:  \(   |u\rangle \ , |d\rangle \  \)
                 infatti i due ket sono mutualmente esclusivi e quindi sono linearmente indipendenti.
                 Un generico stato può essere rappresentato in questo modo:
@@ -71,8 +71,8 @@
                 Se l'apparato di misura è orientato lungo z allora: <br>
 
                 <ul>
-                    <li>  \(  \alpha_u  \alpha_u^*  =  \)  probabilità che la misura dello spin sia +1  stato up</li>
-                    <li>  \(  \alpha_d  \alpha_d^*  =  \)  probabilità che la misura dello spin sia -1  stato down</li>
+                    <li>  \(  \alpha_u  \alpha_u^*  =  \)  probabilità che la misura dello spin sia +1;  stato up</li>
+                    <li>  \(  \alpha_d  \alpha_d^*  =  \)  probabilità che la misura dello spin sia -1;  stato down</li>
                     <li>  \(  \alpha_u  \alpha_u^* +  \alpha_d  \alpha_d^*  =  1 \)  </li>
                     
                 </ul> 
@@ -101,9 +101,9 @@
 
                 $$    \langle u  | d \rangle =0 $$
         
-                la probabilità è:
+                la probabilità è il modulo al quadrato:
 
-                $$  p = \langle u   | r \rangle \langle u   | r \rangle ^*= 1/2 $$
+                $$  \langle u   | r \rangle \langle u   | r \rangle ^*= 1/2 $$
 
                 </p>  
         </article>      
@@ -116,13 +116,13 @@
                 Usiamo ancora \(  | u \rangle, | d \rangle  \) come base. <br>
                 Se ruotiamo A lungo z, la probabilità di trovare lo spin +1 o -1 è sempre la stessa pari a 1/2. <br>
                 Se usiamo la strada fatta per +x avremo per \(  | l \rangle \)  la stessa espressione trovata per \(  | r \rangle \). <br>
-                Dobbiamo aggiungere altre condizioni, usiamo:
+                Dobbiamo però aggiungere altre condizioni che garantiscono la perpendicolarità:
 
                 $$    \langle r  | l \rangle =0     $$
 
                 $$    \langle l  | r \rangle =0     $$
 
-                Facciamo i calcoli:
+                Sulla base di queste facciamo i calcoli:
 
                 $$  | l \rangle = \beta_u | u \rangle + \beta_d | d \rangle  $$
                 $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$
@@ -154,7 +154,7 @@
         <article id="Lungo +y">      
             <h3>Lungo l'asse +y</h3>  
             <p> 
-                Lo spin è misurato lungo +y e poi l'apparato A orientato lungo z <br>
+                Lo spin è misurato lungo +y e poi l'apparato A orientato lungo z. <br>
                 Poniamo le condizioni:
                 
                 $$   | i \rangle = \alpha  | u \rangle + \beta  | d \rangle               \tag{3} $$
@@ -168,28 +168,37 @@
 
                 \langle i | u \rangle   \langle u | i \rangle =1/2 = \alpha \alpha^*     \\      
                 \langle i | d \rangle   \langle d | i \rangle =1/2 = \beta \beta^*             
-                \end{cases}$$
+                \end{cases}   
+                                                                                        \tag{6}  $$
 
 
 
                 Lungo y, condizioni da r e l
-                $$ \begin{cases}
+                $$ \begin{cases} 
                 \langle o | r \rangle   \langle r | o \rangle       =1/2           \\ 
                 \langle o | l \rangle   \langle l | o \rangle       =1/2            \\
 
                 \langle i | r \rangle   \langle r | i \rangle       =1/2            \\
                 \langle i | l \rangle   \langle l | i \rangle       =1/2            \\
-                \end{cases}$$
+                \end{cases}                                                         \tag{7}     $$
 
                 Ricordiamo che:
-                $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$
-                $$  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  $$
+                $$ \begin{cases} 
+                  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  \\
+                  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  
+                \end{cases}   $$
                 
 
-                555555555555555555555555
+                Partiamo da \(| o \rangle \) vedi (4):
             
-                $$   | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              \tag{4} $$    
-                $$   | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$      
+                $$ \begin{cases} 
+                   | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              \\    
+                   | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle        
+                \end{cases}   $$
+
+
+
+
                 $$  \langle o | r \rangle=\gamma^*\frac{1}{\sqrt{2}} +  \delta^*\frac{1}{\sqrt{2}} $$ 
                 $$  \langle r | o \rangle=\gamma\frac{1}{\sqrt{2}} +  \delta\frac{1}{\sqrt{2}} $$ 
                 $$   \langle o | r \rangle   \langle r | o \rangle=    
@@ -305,19 +314,21 @@
                 \phi_1 - \phi_2= 90
                 $$
                 Tra \( \gamma \)  e  \(  \delta \)   vi è uno sfasamento di 90, fissiamo \(  \phi_1=0 \)
-                allora  \( \phi_2=-90 \)  abbiamo:
+                allora  \( \phi_2=-90 \), inoltre dalle (5) sappiamo che  \( \ \gamma^*\gamma= 1/2 \), quindi:
 
                 $$  
-                \gamma = \rho_1  e^{ i\phi_1} = 1/2
+                \gamma = \rho_1  e^{ i\phi_1} = \frac{1}{\sqrt{2}}
                 $$
 
                 $$  
-                \delta = \rho_2  e^{ i\phi_2} =  \frac{1}{2}  e^{ -i90}=-i/2
+                \delta = \rho_2  e^{ i\phi_2} =  \frac{1}{2}  e^{ -i90}=-i \frac{1}{\sqrt{2}}
                 $$
 
                 $$   | o \rangle = 
                 \gamma  | u \rangle + \delta  | d \rangle =
-                \frac{1}{2}  | u \rangle - \frac{i}{2}  | d \rangle          \tag{4} $$                
+                \frac{1}{\sqrt{2}}  | u \rangle    - \frac{i}{\sqrt{2}}  | d \rangle
+
+                      \tag{4} $$                
 
             </p>  
         </article>   
