@@ -91,7 +91,7 @@
                 Se ruotiamo A lungo z la probabilità di trovare lo spin up o down è la stessa pari cioè a 1/2.
                 Possiamo esprimere questo scrivendo:
 
-                $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$
+                $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  \tag{1} $$
 
                 infatti
 
@@ -118,9 +118,9 @@
                 Se usiamo la strada fatta per +x avremo per \(  | l \rangle \)  la stessa espressione trovata per \(  | r \rangle \). <br>
                 Dobbiamo aggiungere altre condizioni, usiamo:
 
-                $$    \langle r  | l \rangle =0    \tag{1} $$
+                $$    \langle r  | l \rangle =0     $$
 
-                $$    \langle l  | r \rangle =0    \tag{2} $$
+                $$    \langle l  | r \rangle =0     $$
 
                 Facciamo i calcoli:
 
@@ -146,7 +146,7 @@
 
                 in conclusione
 
-                $$  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  $$
+                $$  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle \tag{2} $$
 
 
             </p>  
@@ -156,28 +156,35 @@
             <p> 
                 Lo spin è misurato lungo +y e poi l'apparato A orientato lungo z <br>
                 Poniamo le condizioni:
-
+                
                 $$   | i \rangle = \alpha  | u \rangle + \beta  | d \rangle               \tag{3} $$
                 $$   | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              \tag{4} $$
                 $$   \langle i  | o \rangle =0                                            \tag{5} $$
 
-                $$   \langle o | u \rangle   \langle u | o \rangle =1/2  = \gamma \gamma^*          \tag{5} $$
-                $$   \langle o | d \rangle   \langle d | o \rangle =1/2  = \delta \delta^*          \tag{5} $$
+                Lungo z
+                $$ \begin{cases}
+                \langle o | u \rangle   \langle u | o \rangle =1/2  = \gamma \gamma^*    \\     
+                \langle o | d \rangle   \langle d | o \rangle =1/2  = \delta \delta^*    \\      
 
-                $$   \langle i | u \rangle   \langle u | i \rangle =1/2 = \alpha \alpha^*           \tag{5} $$
-                $$   \langle i | d \rangle   \langle d | i \rangle =1/2 = \beta \beta^*             \tag{5} $$
+                \langle i | u \rangle   \langle u | i \rangle =1/2 = \alpha \alpha^*     \\      
+                \langle i | d \rangle   \langle d | i \rangle =1/2 = \beta \beta^*             
+                \end{cases}$$
 
-                Condizioni da r e l
 
-                $$   \langle o | r \rangle   \langle r | o \rangle       =1/2             \tag{5} $$
-                $$   \langle o | l \rangle   \langle l | o \rangle       =1/2             \tag{6} $$
 
-                $$   \langle i | r \rangle   \langle r | i \rangle       =1/2             \tag{7} $$
-                $$   \langle i | l \rangle   \langle l | i \rangle       =1/2             \tag{8} $$
+                Lungo y, condizioni da r e l
+                $$ \begin{cases}
+                \langle o | r \rangle   \langle r | o \rangle       =1/2           \\ 
+                \langle o | l \rangle   \langle l | o \rangle       =1/2            \\
+
+                \langle i | r \rangle   \langle r | i \rangle       =1/2            \\
+                \langle i | l \rangle   \langle l | i \rangle       =1/2            \\
+                \end{cases}$$
 
                 Ricordiamo che:
                 $$  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  $$
                 $$  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  $$
+                
 
                 555555555555555555555555
             
@@ -256,6 +263,7 @@
                 $$  
                 \gamma^*\gamma + \delta^*\delta=1 \tag{5+6} 
                 $$
+
                 $$  
                 \delta^*\gamma+ \gamma^*\delta =0 \tag{5-6} 
                 $$
@@ -263,6 +271,7 @@
                 $$  
                 \gamma = \rho_1  e^{ i\phi_1}
                 $$
+
                 $$  
                 \delta = \rho_2  e^{ i\phi_2}
                 $$
@@ -270,6 +279,7 @@
                 $$  
                 \delta^*  \gamma= \rho_2 \rho_1  e^{ i(\phi_1 - \phi_2)}
                 $$
+
                 $$  
                 \delta  \gamma^*= \rho_2 \rho_1  e^{ i(\phi_2 - \phi_1)}
                 $$
@@ -277,23 +287,37 @@
                 \rho_2 \rho_1  e^{ i(\phi_1 - \phi_2)}=
                 -\rho_2 \rho_1  e^{ i(\phi_2 - \phi_1)}
                 $$
+
                 $$  
                 e^{ i(\phi_1 - \phi_2)}=
                 - e^{ i(\phi_2 - \phi_1)}=
-                e^{ i(\phi_2 - \phi_1-90)}
+                e^{ i(\phi_2 - \phi_1+180)}
                 $$
 
                 $$  
-                \phi_1 - \phi_2= \phi_2 - \phi_1-90 
+                \phi_1 - \phi_2= \phi_2 - \phi_1+180 
                 $$
                 $$  
-                2(\phi_1 - \phi_2)=-90 
+                2(\phi_1 - \phi_2)=180 
                 $$
 
                 $$  
-                \phi_2 - \phi_1= 45 
+                \phi_1 - \phi_2= 90
+                $$
+                Tra \( \gamma \)  e  \(  \delta \)   vi è uno sfasamento di 90, fissiamo \(  \phi_1=0 \)
+                allora  \( \phi_2=-90 \)  abbiamo:
+
+                $$  
+                \gamma = \rho_1  e^{ i\phi_1} = 1/2
                 $$
 
+                $$  
+                \delta = \rho_2  e^{ i\phi_2} =  \frac{1}{2}  e^{ -i90}=-i/2
+                $$
+
+                $$   | o \rangle = 
+                \gamma  | u \rangle + \delta  | d \rangle =
+                \frac{1}{2}  | u \rangle - \frac{i}{2}  | d \rangle          \tag{4} $$                
 
             </p>  
         </article>   
