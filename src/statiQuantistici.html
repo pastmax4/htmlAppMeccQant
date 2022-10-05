@@ -184,16 +184,16 @@
 
                 Ricordiamo che:
                 $$ \begin{cases} 
-                  | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  \\
-                  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  
+                | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle  \\
+                | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  
                 \end{cases}   $$
                 
 
-                Partiamo da \(| o \rangle \) vedi (4):
+                Partiamo da \(| o \rangle \) vedi (4) e poniamo le condizioni (7):
             
                 $$ \begin{cases} 
-                   | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              \\    
-                   | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle        
+                | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              \\    
+                | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle        
                 \end{cases}   $$
 
 
@@ -211,14 +211,24 @@
                 \frac{1}{2}(\gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta)=1/2
                 $$
                 Quindi:
+                </p>
+                <p class="riquadro">
                 $$   \langle o | r \rangle   \langle r | o \rangle=
-                \gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta   =1        \tag{5} $$
-                66666666666666666666666
+                \gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta   =1        \tag{8} $$                
+                </p>
+                <p>
+                    66666666666666666666666
+                    Passiamo alla seconda:
 
-                $$   \langle o | l \rangle   \langle l | o \rangle       =1/2             \tag{6} $$
-                $$  | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  $$
-                $$   | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              $$ 
+                $$   \langle o | l \rangle   \langle l | o \rangle       =1/2             $$
+                    le condizioni sono:
+                $$ \begin{cases} 
+                | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  \\
+                | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              
+                \end{cases}   $$
 
+
+                
                 $$   \langle o | l \rangle =
                 \frac{1}{\sqrt{2}}  \gamma^* -  \frac{1}{\sqrt{2}}  \delta^*
                 $$
@@ -239,42 +249,51 @@
                 ( \gamma^*\gamma  -  \delta^*\gamma -   \gamma^*\delta +  \delta^*\delta)
 
                 $$
-
-
+                </p>
+                <p class="riquadro">
                 $$   \langle o | l \rangle   \langle l | o \rangle       = 
-                \gamma^*\gamma  -  \delta^*\gamma -   \gamma^*\delta +  \delta^*\delta=1
+                \gamma^*\gamma  -  \delta^*\gamma -   \gamma^*\delta +  \delta^*\delta=1  \tag{9}
                 $$
-
+                </p>
+                <p>
                     --------------  55555 e 666666
-                $$ 
-                    \gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta   =1   \tag{5}      $$
-                
+                    Mettiamo insieme la (8) e la (9)
+                    $$ \begin{cases} 
+                    \gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta   =1  \tag{10} \\      
+                    \gamma^*\gamma  -  \delta^*\gamma -   \gamma^*\delta +  \delta^*\delta=1 
+                    \end{cases}   $$
+
+                    Sommiamo le (10)
                 $$  
-                    \gamma^*\gamma  -  \delta^*\gamma -   \gamma^*\delta +  \delta^*\delta=1 \tag{6} 
+                2\gamma^*\gamma + 2\delta^*\delta=2 
                 $$
+            </p>
+            <p class="riquadro">                
 
                 $$  
-                2\gamma^*\gamma + 2\delta^*\delta=2 \tag{5+6} 
+                \gamma^*\gamma + \delta^*\delta=1  \tag{11}
                 $$
-                $$  
-                \gamma^*\gamma + \delta^*\delta=1 \tag{5+6} 
-                $$
-
-    
+            </p>
+            <p>
+                Sottraiamo le (10)
                 $$  
                 2\delta^*\gamma+ 2 \gamma^*\delta =0 \tag{5-6} 
+
+                $$
+            </p>
+            <p class="riquadro">
+                $$  
+                \delta^*\gamma+ \gamma^*\delta =0 \tag{12} 
                 $$
 
-                $$  
-                \delta^*\gamma+ \gamma^*\delta =0 \tag{5-6} 
-                $$
-                insiemeeee:
-                $$  
-                \gamma^*\gamma + \delta^*\delta=1 \tag{5+6} 
-                $$
+                </p>
+                <p>
+                Mettiamo a sistema la (11) e la (12)
 
-                $$  
-                \delta^*\gamma+ \gamma^*\delta =0 \tag{5-6} 
+                $$ \begin{cases}
+                \gamma^*\gamma + \delta^*\delta=1   \\                
+                \delta^*\gamma+ \gamma^*\delta =0  
+                \end{cases}   
                 $$
 
                 $$  
