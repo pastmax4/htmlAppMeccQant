@@ -80,7 +80,7 @@
                     sequence of single qubits to Bob. <br>
                     In our case we suppose the qubits are encoded in the polarization
                     states of individual photons. <br>
-                    <b> Both channels can be observed by an eavesdropper Eve. </b>
+                    <b> Both channels can be observed by an eavesdropper Eve. </b> <br>
                     Alice operates this way:
                     <ul>
                         <li>Generate a random sequence of classical bit values</li>
@@ -95,12 +95,34 @@
 
                             $$  | 0 \rangle \to    |\nearrow  \rangle $$
                             $$  | 1 \rangle \to    |\nwarrow  \rangle $$  
+                        </li>                        
+                    </ul> 
+                    Bob:
 
+                    <ul>
+                        <li>Bob measures the state of each photon he receives by randomly picking either basis.</li>
+                        <li> Over
+                            the classical channel, Alice and Bob check that Bob has received a photon for every one Alice
+                            has sent, and only then do Alice and Bob tell each other the bases they used for encoding and
+                            decoding (measuring) each bit.    </li> 
+
+                        <li>When the choice of bases agree, Bob’s measured bit value agrees
+                            with the bit value that Alice sent. </li>       
+
+                        <li>When they chose different bases, the chance that Bob’s bit
+                            matches Alice’s is only 50 percent (remember that changing the base measuring bacame no more deterministic). They do not reveal the bit values, which would
+                            also reveal the values to Eve. So they simply discard all the bits on which their choice of bases
+                            differed.</li>    
+
+                        <li>Depending on the level of assurance they require, Alice and Bob compare a certain number of bit values to check that no
+                            eavesdropping has occurred: same base must have same bit values else the bit state has been read by Eve.
+                            Of course these bits will be discarded, and only the remaining bits will be used 
+                            as their private key.
                         </li>
-
-                        pag 19
                     </ul> 
 
+
+Pag.20 inizio pagina  We describe one sort of attack
 
 
 
