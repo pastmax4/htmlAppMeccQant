@@ -154,7 +154,8 @@
         <article id="Lungo +y">      
             <h3>Lungo l'asse +y</h3>  
             <p> 
-                Lo spin è misurato lungo +y e poi l'apparato A orientato lungo z. <br>
+                Lo spin è misurato lungo +y e poi l'apparato A è orientato lungo z. <br>
+                Dobbiamo trovare \(   | i \rangle,  | o \rangle   \).
                 Poniamo le condizioni:
                 
                 $$   | i \rangle = \alpha  | u \rangle + \beta  | d \rangle               \tag{3} $$
@@ -171,9 +172,7 @@
                 \end{cases}   
                                                                                         \tag{6}  $$
 
-
-
-                Lungo y, condizioni da r e l
+                Lungo y, condizioni che derivano da \(   | r \rangle,  | l \rangle   \)
                 $$ \begin{cases} 
                 \langle o | r \rangle   \langle r | o \rangle       =1/2           \\ 
                 \langle o | l \rangle   \langle l | o \rangle       =1/2            \\
@@ -188,16 +187,14 @@
                 | l \rangle = \frac{1}{\sqrt{2}} | u \rangle - \frac{1}{\sqrt{2}} | d \rangle  
                 \end{cases}   $$
                 
-
                 Partiamo da \(| o \rangle \) vedi (4) e poniamo le condizioni (7):
+
+                $$ \langle o | r \rangle   \langle r | o \rangle  $$
             
                 $$ \begin{cases} 
                 | o \rangle = \gamma  | u \rangle + \delta  | d \rangle              \\    
                 | r \rangle = \frac{1}{\sqrt{2}} | u \rangle + \frac{1}{\sqrt{2}} | d \rangle        
                 \end{cases}   $$
-
-
-
 
                 $$  \langle o | r \rangle=\gamma^*\frac{1}{\sqrt{2}} +  \delta^*\frac{1}{\sqrt{2}} $$ 
                 $$  \langle r | o \rangle=\gamma\frac{1}{\sqrt{2}} +  \delta\frac{1}{\sqrt{2}} $$ 
@@ -211,14 +208,14 @@
                 \frac{1}{2}(\gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta)=1/2
                 $$
                 Quindi:
-                </p>
-                <p class="riquadro">
+            </p>
+            <p class="riquadro">
                 $$   \langle o | r \rangle   \langle r | o \rangle=
                 \gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta   =1        \tag{8} $$                
                 </p>
-                <p>
-                    66666666666666666666666
-                    Passiamo alla seconda:
+            <p>
+    
+                Passiamo alla seconda:
 
                 $$   \langle o | l \rangle   \langle l | o \rangle       =1/2             $$
                     le condizioni sono:
@@ -256,7 +253,6 @@
                 $$
                 </p>
                 <p>
-                    --------------  55555 e 666666
                     Mettiamo insieme la (8) e la (9)
                     $$ \begin{cases} 
                     \gamma^*\gamma +  \delta^*\gamma+ \gamma^* \delta+  \delta^* \delta   =1  \tag{10} \\      
@@ -333,7 +329,10 @@
                 \phi_1 - \phi_2= 90
                 $$
                 Tra \( \gamma \)  e  \(  \delta \)   vi è uno sfasamento di 90, fissiamo \(  \phi_1=0 \)
-                allora  \( \phi_2=-90 \), inoltre dalle (5) sappiamo che  \( \ \gamma^*\gamma= 1/2 \), quindi:
+                allora  \( \phi_2=-90 \), definiamo questo quindi con un arbitrario fattore di fase,poteva
+                essere +90,
+                inoltre dalle (5) sappiamo che  \( \ \gamma^*\gamma= 1/2 \), 
+                quindi:
 
                 $$  
                 \gamma = \rho_1  e^{ i\phi_1} = \frac{1}{\sqrt{2}}
@@ -346,10 +345,81 @@
                 $$   | o \rangle = 
                 \gamma  | u \rangle + \delta  | d \rangle =
                 \frac{1}{\sqrt{2}}  | u \rangle    - \frac{i}{\sqrt{2}}  | d \rangle
-
-                      \tag{4} $$                
-
+                                            $$     
             </p>  
+
+            <p class="riquadro">                
+                $$   | o \rangle =                  
+                    \frac{1}{\sqrt{2}}  | u \rangle    - \frac{i}{\sqrt{2}}  | d \rangle
+                                                                        \tag{13} $$     
+                                                                        
+            </p>  
+            
+            <p>
+                Dobbiamo trovare ora \(  | i \rangle  \). Le condizioni sono identiche a
+                a quelle poste per \(  | o \rangle  \):
+                $$
+                \langle i | u \rangle   \langle u | i \rangle =1/2 = \alpha \alpha^*     \\      
+                \langle i | d \rangle   \langle d | i \rangle =1/2 = \beta \beta^*     \\
+                | i \rangle = \alpha  | u \rangle + \beta  | d \rangle               
+                $$
+
+con in piu' la condizione:
+$$   \langle i  | o \rangle =0                            \tag{14}          $$
+
+Possiamo scrivere direttamente 
+
+$$  
+\alpha = \rho_a  e^{ i\phi_a} = \frac{1}{\sqrt{2}}
+$$
+
+$$  
+\beta = \rho_b  e^{ i\phi_b} =  \frac{1}{2}  e^{ -i90}=-i \frac{1}{\sqrt{2}}
+$$
+ma c'è un errore la fase di \( \beta \) è definita a meno di un fattore di fase che per \(  \delta \)
+era stato scelto pari a -90. Per rispettare la (14) dobbiamo fare una scelta diversa:
+poniamo ad esempio \(  \phi_b=+90 \)
+
+$$  
+\beta = \rho_b  e^{ i\phi_b} =  \frac{1}{2}  e^{ i90}=i \frac{1}{\sqrt{2}}
+$$
+Cosi abbiamo:
+$$   | i \rangle =                  
+\frac{1}{\sqrt{2}}  | u \rangle    + \frac{i}{\sqrt{2}}  | d \rangle
+                                                    $$     
+Verifichiamo se la (14) è verificata:
+$$ 
+\langle i  | o \rangle =0                          \\
+
+\langle (\frac{1}{\sqrt{2}}  \langle u|    - \frac{i}{\sqrt{2}}  \langle d| ) | (
+\frac{1}{\sqrt{2}}  |  u \rangle    - \frac{i}{\sqrt{2}}  | d \rangle) \rangle = \\
+
+\frac{1}{2}  \langle u|   u \rangle - \frac{1}{2}  \langle d|   d \rangle=
+\frac{1}{2}  - \frac{1}{2}  =0
+
+$$
+
+La perpendicolarità è rispettata. Riassumendo:
+
+<p class="riquadro">                
+    $$ \begin{cases}
+    
+    | i \rangle =  \frac{1}{\sqrt{2}}  | u \rangle    + \frac{i}{\sqrt{2}}  | d \rangle \tag{15}  \\
+    | o \rangle =  \frac{1}{\sqrt{2}}  | u \rangle    - \frac{i}{\sqrt{2}}  | d \rangle     
+        
+
+    \end{cases} $$ 
+                                                                                                                                                                                                        
+</p>  
+                                        
+
+
+<p>
+
+
+
+            </p>
+
         </article>   
         
         <!-- --------------------------------------------- -->        
