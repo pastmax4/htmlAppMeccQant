@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+    https://www.physicsread.com/latex-ket-notation/
+
+-->
+<body>
+    <head>
+        <h1>Quantum Key Distribution Protocol</h1>
+        <p>
+            Eleanor Rieffel Wolffang Polak - Quantum computing - Pag.18</p>
+        </p>
+    </head>
+    <hr>
+    <main>
+        <article id="keys">      
+            <h3>Private and public Keys </h3>  
+            <p> 
+                Keys—binary strings or numbers chosen randomly from a sufficiently large set—provide the
+                security for most cryptographic protocols. <br>
+                For this reason, the establishment of keys between the parties who wish to communicate is of
+                fundamental importance in cryptography. <br>
+                Two general classes of keys exist: <b> symmetric keys and public-private key pairs. </b>
+                Both types are used widely, often in conjunction, in a wide variety of
+                practical settings, from secure e-commerce transactions to private communication over public
+                networks. <br>
+                Quantum key distribution protocols establish a symmetric key between two parties, called
+                Alice and Bob.
+            </article>
+                       
+            </p>                    
+
+            <article id="BB84">      
+                <h3>BB84 </h3>  
+                <p> 
+                    The earliest quantum key distribution protocol is known as BB84 after its inventors, Charles
+                    Bennett and Gilles Brassard, and the year of the invention.
+                    pag. 18  4 capoverso
+                </p>        
+
+                <p class="riquadro">
+                    The aim of the BB84 protocol is
+                    to establish a secret key, a random sequence of bit values 0 and 1, known only to the two
+                    parties, Alice and Bob.
+                </p>        
+                <p class="riquadro">
+                    The BB84 protocol enables Alice and Bob to be sure
+                    that if they detect no problems while attempting to establish a key, then with high probability
+                    it is secret. 
+                    The protocol does not guarantee, however, that they will succeed in establishing a
+                    private key.
+                </p>
+                <p>
+                    Suppose Alice and Bob are connected by two public channels: an ordinary bidirectional classical
+                    channel and a unidirectional quantum channel.
+                
+                    <figure>
+                        <img src="img/quantumComputing/aliceAndBob01.jpg" alt="Alice and Bob channels" title="Alice and Bob channels" width="400"
+                            height="245">
+                        <figcaption>
+                            Fig.1 Alice and Bob channels <span style="font-style: italic"> </span>
+                        </figcaption>
+                    </figure>
+
+                    The quantum channel allows Alice to send a
+                    sequence of single qubits to Bob. <br>
+                    In our case we suppose the qubits are encoded in the polarization
+                    states of individual photons. <br>
+                    <b> Both channels can be observed by an eavesdropper Eve. </b> <br>
+                    Alice operates this way:
+                    <ul>
+                        <li>Generate a random sequence of classical bit values</li>
+                        <li>Encodes each bit of
+                            this sequence in the polarization state of a photon choosing randomly
+                            between two bases.
+                            Standard basis
+                            $$  | 0 \rangle \to    |\to  \rangle $$
+                            $$  | 1 \rangle \to     |\uparrow  \rangle $$  
+
+                            Hadamard basis
+
+                            $$  | 0 \rangle \to    |\nearrow  \rangle $$
+                            $$  | 1 \rangle \to    |\nwarrow  \rangle $$  
+                        </li>                        
+                    </ul> 
+                    Bob:
+
+                    <ul>
+                        <li>Bob measures the state of each photon he receives by randomly picking either basis.</li>
+                        <li> Over
+                            the classical channel, Alice and Bob check that Bob has received a photon for every one Alice
+                            has sent, and only then do Alice and Bob tell each other the bases they used for encoding and
+                            decoding (measuring) each bit.    </li> 
+
+                        <li>When the choice of bases agree, Bob’s measured bit value agrees
+                            with the bit value that Alice sent. </li>       
+
+                        <li>When they chose different bases, the chance that Bob’s bit
+                            matches Alice’s is only 50 percent (remember that changing the base measuring bacame no more deterministic). They do not reveal the bit values, which would
+                            also reveal the values to Eve. So they simply discard all the bits on which their choice of bases
+                            differed.</li>    
+
+                        <li>Depending on the level of assurance they require, Alice and Bob compare a certain number of bit values to check that no
+                            eavesdropping has occurred: same base must have same bit values else the bit state has been read by Eve.
+                            Of course these bits will be discarded, and only the remaining bits will be used 
+                            as their private key.
+                        </li>
+                    </ul> 
+
+
+Pag.20 inizio pagina  We describe one sort of attack
+
+
+
+                </p>
+
+
+        <!-- --------------------------------------------- -->        
+        <!-- --------------------------------------------- -->
+        <hr>
+        <hr>
+        
+    </main> 
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>
