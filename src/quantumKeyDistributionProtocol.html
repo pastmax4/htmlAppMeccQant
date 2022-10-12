@@ -122,9 +122,59 @@
                     </ul> 
 
 
-Pag.20 inizio pagina  We describe one sort of attack
+                    Now, let's see one sort of attack that Eve can make and how quantum aspects of this protocol
+                    guard against it. <br> <br>
+                    On the classical channel, Alice and Bob discuss only the choice of bases and
+                    not the bit values themselves, so Eve cannot gain any information about 
+                    the key from listening to the classical channel alone. <br>
 
+                    To gain information, Eve must intercept the photons transmitted by
+                    Alice through the quantum channel. <br>
 
+                    Eve must send photons to Bob before knowing the choice of
+                    bases made by Alice and Bob, because they compare bases only after Bob has confirmed receipt
+                    of the photons. <br>
+
+                    If she sends different photons to Bob, Alice and Bob will detect that something is
+                    wrong when they compare bit values, but if she sends the original photons to Bob without doing
+                    anything, she gains no information. <br>
+
+                    To gain information, Eve makes a measurement before sending the photons to Bob. Instead of
+                    using a polaroid to measure, she can use a calcite crystal and a photon detector; 
+
+                    a beam of light passing through a calcite crystal is split into two spatially separated beams, 
+                    one polarized in the direction of the crystal’s optic axis and the other polarized 
+                    in the direction perpendicular to the optic axis. 
+                    A photon detector placed in one of the beams performs a quantum measurement. <br>
+
+                    Since Alice has not yet told Bob her sequence of bases, Eve does not know in which basis
+                    to measure each bit. If she randomly measures the bits, she will measure using the wrong basis
+                    approximately <b> half of the time. </b> <br>
+
+                    When Eve uses the wrong basis to measure, the measurement changes
+                    the polarization of the photon before it is resent to Bob. <br>
+
+                    The measure of Eve change the polarization, implying that, even if Bob measures
+                    the photon in the same basis as Alice used to encode the bit, he
+                    will get the correct bit value only half the time. <br>
+
+                    Overall, for each of the qubits Alice and Bob retain, if the qubit was measured by Eve before
+                    she sent it to Bob, there will be a <b> 25 percent chance </b> that Bob measures a different bit value than
+                    the one Alice sent.
+                    This means that only 25% of bit of shared key are common to Alice and Bob. <br>
+
+                    This introduce a high error rate that Alice and Bob detect by comparing 
+                    a sufficient number of bits over the classical channel. <br>
+
+                    Otherwise if bits agree, they can confidently use the remaining bits as their private key.
+                    So, not only is it likely that 25 percent of Eve’s version of the key is incorrect, 
+                    but the fact that someone is eavesdropping can be detected by Alice and Bob,
+                    either they succeed in creating a private key or they detect that eavesdropping
+                    has taken place. <br>
+
+                    The security of this protocol, like other pure key distribution protocols such as Diffie-Hellman,
+                    is vulnerable to a man-in-the-middle attack in which Eve impersonates Bob to Alice and imper-
+                    sonates Alice to Bob. 
 
                 </p>
 
