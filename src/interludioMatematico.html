@@ -46,19 +46,49 @@
                 $$ \boldsymbol{M} z | A \rangle = z| B \rangle  $$
                 $$ \boldsymbol{M} (| A \rangle + | B \rangle)=\boldsymbol{M} | A \rangle + \boldsymbol{M}| B \rangle   $$
 
-Rappresentiamo \(  | A \rangle \) e \(  | B \rangle \)  con una base \(  | j \rangle \):
+                Rappresentiamo \(  | A \rangle \) e \(  | B \rangle \)  con una base \(  | j \rangle \):
 
-$$   | A \rangle = \sum_{j=1}^N  \alpha_j |j \rangle  $$
-$$   | B \rangle = \sum_{j=1}^N  \beta_j |j \rangle  $$
+                $$   | A \rangle = \sum_{j=1}^N  \alpha_j |j \rangle  $$
+                $$   | B \rangle = \sum_{j=1}^N  \beta_j |j \rangle  $$
 
-Sostituiamo nella (1)
-$$    \sum_{j=1}^N  \boldsymbol{M} \alpha_j |j \rangle = \sum_{j=1}^N  \beta_j |j \rangle $$
+                Sostituiamo nella (1)
+                $$    \sum_{j=1}^N  \boldsymbol{M} \alpha_j |j \rangle = \sum_{j=1}^N  \beta_j |j \rangle $$
 
-Vediamo la proiezione lungo un versore \(  | k \rangle \). Facciamo quindi il prodotto
-interno con  \(   \langle k | \):
-$$    \sum_{j=1}^N  \langle k | \boldsymbol{M} |j \rangle \alpha_j = \sum_{j=1}^N  \beta_j \langle k |j \rangle $$
+                Vediamo la proiezione lungo un versore \(  | k \rangle \). Facciamo quindi il prodotto
+                interno con  \(   \langle k | \):
+                $$    \sum_{j=1}^N  \langle k | \boldsymbol{M} |j \rangle \alpha_j = \sum_{j=1}^N  \beta_j \langle k |j \rangle \tag{2} \\
+                        \langle k |j \rangle = 0 \text{ se  }  k \neq j  \\
+                        \langle k |j \rangle = 1 \text{ se  }  k = j
+                $$
 
-pag 42 
+                Il secondo membro della (2) diventa:
+                $$ \sum_{j=1}^N  \beta_j \langle k |j \rangle =\beta_k $$
+                Vediamo il primo membro della (2)
+
+                $$  \langle k | \boldsymbol{M} |j \rangle  $$
+                \(   \boldsymbol{M} |j \rangle \) produce un ket \(   \boldsymbol{M} |j \rangle =   |t \rangle \)
+
+                $$  \langle k | \boldsymbol{M} |j \rangle =   \langle k | t \rangle = m_{kj} = \text{ numero complesso  } $$
+
+                I termini \(  m_{kj} \) sono gli elementi di una matrice quadrata, ad esempio se N=3
+
+                $$
+
+                \boldsymbol{M}  =
+                \begin{pmatrix}
+                                m_{11} \
+                                m_{12} \
+                                m_{13} \ \\
+                                m_{21} \
+                                m_{22} \
+                                m_{23} \ \\
+                                m_{31} \
+                                m_{32} \
+                                m_{33} \ \\
+
+                \end{pmatrix}
+                $$
+
 
             </p>
 
