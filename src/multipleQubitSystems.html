@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+    https://www.physicsread.com/latex-ket-notation/
+
+    Formule matematiche
+    https://it.wikipedia.org/wiki/Aiuto:Formule_matematiche_TeX
+
+-->
+<body>
+    <head>
+        <h1>The State Space of a Single-Qubit System</h1>
+        <p>
+            Eleanor Rieffel Wolffang Polak - Quantum computing - Pag 31</p>
+        </p>
+    </head>
+    <hr>
+    <main>
+
+        <article id="stateSpaceOfSingleQubit">      
+            <h3>Introduction  </h3>               
+            <p>
+
+                Encoding information in quantum states is  efficient
+                when examining systems of more than one qubit. <br> <br>
+
+                <b></b>Unlike classical systems,
+                the state space of a quantum system grows exponentially with the number of particles. </b> 
+                Thus, when
+                we encode computational information in quantum states of a system of n particles, there are vastly
+                more possible computation states available than when classical states are used to encode the infor-
+                mation.  <br>
+                These large state spaces corresponding to small amounts of physical
+                space can be used to speed up computation. <br>
+
+                A surprising and unintuitive aspect of quantum systems is 
+                that often the state of a system cannot be described in terms of the
+                states of its component pieces: these are the entangled states. <br> <br>
+
+                Most states in a multiple-qubit system are entangled states; 
+                they are what fills the vast quantum state
+                spaces.  <br> <br>
+
+                In classical physics, the possible states of a system of n objects, whose individual states can
+                be described by a vector in a two-dimensional vector space, can be described by vectors in a
+                vector space of 2n dimensions.
+                
+                $$   
+                    n=5    \\
+                    a,b,c,d,e \in (0,1) \\                
+                    \text{dim tot}= 2 \times 5
+                $$
+                
+                Classical state spaces combine through the direct sum. <br>                            
+                The combined state space of n quantum systems is much larger. 
+                
+                The vector spaces associated with the quantum systems  <b> combine through
+                the tensor product </b>, resulting in a vector space of:
+                
+                $$ dimensions= 2^n $$
+                
+                
+                Pag 32 Direct Sums of Vector Spaces
+                
+
+                
+            </p>       
+        </article>
+
+        
+        <!-- --------------------------------------------- -->        
+        <!-- --------------------------------------------- -->
+        <hr>
+        <hr>
+        
+    </main> 
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>
