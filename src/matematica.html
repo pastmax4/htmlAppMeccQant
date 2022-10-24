@@ -152,8 +152,74 @@ I ket possono essere rappresentati anche come vettori colonna:
                 $$ \langle a_j  | a_i \rangle = 0 \iff  i \neq j  $$
             </p>
 
+        </article>
+
+        <article id="prodottoMatrice">
+            <h3>Prodotto di una matrice per un vettore</h3>
+            <p>
+
+                $$               
+                    \begin{pmatrix}
+                                    m_{11} \
+                                    m_{12} \
+                                    m_{13} \ \\
+                                    m_{21} \
+                                    m_{22} \
+                                    m_{23} \ \\
+                                    m_{31} \
+                                    m_{32} \
+                                    m_{33} \ \\
+                    \end{pmatrix}
+                    \begin{pmatrix}
+                        \alpha_1 \\
+                        \alpha_2 \\
+                        \alpha_3  \\                    
+                    \end{pmatrix} =
+
+                    \begin{pmatrix}
+                        \beta_1 \\
+                        \beta_2 \\
+                        \beta_3  \\                    
+                    \end{pmatrix} 
+                $$
+                $$
+                    \beta_1=  m_{11} \alpha_1 + m_{12} \alpha_2+ m_{13} \beta_3 \\
+                    \beta_2=  m_{21} \alpha_1 + m_{22} \alpha_2+ m_{23} \alpha_3 \\
+                    \beta_3=  m_{31} \alpha_1 + m_{32} \alpha_2+ m_{33} \alpha_3 
+                $$
+
+                $$
+                    \begin{pmatrix}
+                        \beta_1 \\
+                        \beta_2 \\
+                        \beta_3  \\                    
+                    \end{pmatrix} =
+
+                    \begin{pmatrix}
+                        m_{11} \\  
+                        m_{21} \\
+                        m_{31} \\
+                    \end{pmatrix} \alpha_1 +
+
+                    \begin{pmatrix}
+                        m_{12} \\  
+                        m_{22} \\
+                        m_{32} \\
+                    \end{pmatrix} \alpha_2 +
+
+                    \begin{pmatrix}
+                        m_{13} \\  
+                        m_{23} \\
+                        m_{33} \\
+                    \end{pmatrix} \alpha_3 
+                $$
+
+            </p>
 
         </article>
+
+
+
 
         <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->

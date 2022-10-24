@@ -61,9 +61,11 @@
                         \langle k |j \rangle = 1 \text{ se  }  k = j
                 $$
 
-                Il secondo membro della (2) diventa:
+                Il <b> secondo membro </b> della (2) diventa:
+                
                 $$ \sum_{j=1}^N  \beta_j \langle k |j \rangle =\beta_k $$
-                Vediamo il primo membro della (2)
+                
+                Vediamo il <b> primo membro </b> della (2)
 
                 $$  \langle k | \boldsymbol{M} |j \rangle  $$
                 \(   \boldsymbol{M} |j \rangle \) produce un ket \(   \boldsymbol{M} |j \rangle =   |t \rangle \)
@@ -89,11 +91,71 @@
                 \end{pmatrix}
                 $$
 
+                La (2) diventa quindi:
+                $$    \sum_{j=1}^N   m_{kj} \alpha_j = \beta_k   $$
+                
+                Il prodotto della matrice M per il ket \(  | A \rangle \) , da un ket le cui componenti sono
+                \(  \beta_k  \)  ad esempio:
+
+                $$               
+                    \begin{pmatrix}
+                                    m_{11} \
+                                    m_{12} \
+                                    m_{13} \ \\
+                                    m_{21} \
+                                    m_{22} \
+                                    m_{23} \ \\
+                                    m_{31} \
+                                    m_{32} \
+                                    m_{33} \ \\
+                    \end{pmatrix}
+                    \begin{pmatrix}
+                        \alpha_1 \\
+                        \alpha_2 \\
+                        \alpha_3  \\                    
+                    \end{pmatrix} =
+
+                    \begin{pmatrix}
+                        \beta_1 \\
+                        \beta_2 \\
+                        \beta_3  \\                    
+                    \end{pmatrix} 
+                $$
+
+                $$
+                    \beta_1=  m_{11} \alpha_1 + m_{12} \alpha_2+ m_{13} \beta_3 \\
+                    \beta_2=  m_{21} \alpha_1 + m_{22} \alpha_2+ m_{23} \alpha_3 \\
+                    \beta_3=  m_{31} \alpha_1 + m_{32} \alpha_2+ m_{33} \alpha_3 
+                $$
+
+                $$
+                    \begin{pmatrix}
+                        \beta_1 \\
+                        \beta_2 \\
+                        \beta_3  \\                    
+                    \end{pmatrix} =
+
+                    \begin{pmatrix}
+                        m_{11} \\  
+                        m_{21} \\
+                        m_{31} \\
+                    \end{pmatrix} \alpha_1 +
+
+                    \begin{pmatrix}
+                        m_{12} \\  
+                        m_{22} \\
+                        m_{32} \\
+                    \end{pmatrix} \alpha_2 +
+
+                    \begin{pmatrix}
+                        m_{13} \\  
+                        m_{23} \\
+                        m_{33} \\
+                    \end{pmatrix} \alpha_3 
+                $$
+
 
             </p>
-
-
-
 
 
             <div>
