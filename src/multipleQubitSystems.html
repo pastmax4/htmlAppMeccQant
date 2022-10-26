@@ -85,7 +85,7 @@
                 $$
                     A= \{ | \alpha_1 \rangle ,| \alpha_2 \rangle ,...,| \alpha_N \rangle    \}  \\ 
                     B= \{ | \beta_1 \rangle ,| \beta_2 \rangle ,...,| \beta_M \rangle    \}   \\
-                    T = V \otimes W     \text{     Direct sum} \\ 
+                    T = V  \oplus  W     \text{     Direct sum} \\ 
                 $$
 
                 The base of T is:
@@ -96,15 +96,68 @@
                     dim(C)=dim(A)+dim(B)  \\
                     \text {For same:   }  | v \rangle \in V ,  | w \rangle  \in W \\
                     | c \rangle \in C \\
-                    | c \rangle = | v \rangle \otimes | w \rangle
+                    | c \rangle = | v \rangle \oplus | w \rangle
                 $$
 
-pag.32 Addition and scalar
+                Addition and scalar multiplication are defined by performing the operation on the two component
+                vector spaces separately and adding the results. 
+                In general:
+                $$  
+                    \begin{pmatrix}
+                    x_1\\
+                    p_1\\
+                    \end{pmatrix}  \oplus 
+                    \begin{pmatrix}
+                    x_2\\
+                    p_2\\
+                    \end{pmatrix}  \oplus 
+                    \begin{pmatrix}
+                    x_3\\
+                    p_3\\
+                    \end{pmatrix} =
 
-
+                    \begin{pmatrix}
+                    x_1\\
+                    p_1\\
+                    x_2\\
+                    p_2\\
+                    x_3\\
+                    p_3\\
+                    \end{pmatrix} 
+                $$
+                Single component has dimension 2 thus total dimension is 2 x N, in this case 
+                dimension is 6.
             </p>      
         </article>
-        
+
+        <article id="tensorProductsOfVectorSpaces">      
+            <h3>Tensor Products of Vector Spaces </h3>               
+            <p>
+                Given two  vector spaces V and W with bases A,B:
+                
+                $$
+                    A= \{ | \alpha_1 \rangle ,| \alpha_2 \rangle ,...,| \alpha_N \rangle    \}  \\ 
+                    B= \{ | \beta_1 \rangle ,| \beta_2 \rangle ,...,| \beta_M \rangle    \}   \\
+                    T = V  \otimes  W     \text{     tensor product} \\ 
+                $$
+                Tensor product is an abstract
+                binary operator that satisfies the following relations:
+
+                $$
+                    (| v_1 \rangle + | v_2 \rangle)  \otimes | w \rangle=
+                                | v_1 \rangle \otimes | w \rangle + | v_2 \rangle \otimes  | w \rangle  
+                \\
+                    | w \rangle \otimes (| v_1 \rangle + | v_2 \rangle)  =
+                                | w \rangle \otimes | v_1 \rangle + | w \rangle \otimes  | v_1 \rangle  
+                \\
+                (a| v \rangle)  \otimes | w \rangle =| v \rangle \otimes (a| w \rangle)= a(|v \rangle  \otimes | w \rangle)
+
+                $$
+                
+            </p>      
+        </article>
+        pag 33 Taking k = min(n, m)
+
         <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->
         <hr>
