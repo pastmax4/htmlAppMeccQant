@@ -153,10 +153,61 @@
                 (a| v \rangle)  \otimes | w \rangle =| v \rangle \otimes (a| w \rangle)= a(|v \rangle  \otimes | w \rangle)
 
                 $$
-                
+                All elements of T can be written as:
+                $$
+                    L = N \times M    \\
+                    | t \rangle=  l_1 (| \alpha_1 \rangle \otimes | \beta_1 \rangle) +  \\
+                                l_2 (| \alpha_2 \rangle \otimes | \beta_1 \rangle) + ...+  \\
+                                l_N (| \alpha_N \rangle \otimes | \beta_1 \rangle) + ...+  \\
+                                l_{N+1} (| \alpha_1 \rangle \otimes | \beta_2 \rangle) + ...+  \\
+                                l_{L} (| \alpha_N \rangle \otimes | \beta_M \rangle)   \\
+
+                $$                
+
+                Thus we have \(    L = N \times M   \) components for ket \( | t \rangle \) beeing
+                T nm-dimensional space.
+
             </p>      
         </article>
-        pag 33 Taking k = min(n, m)
+
+        <article id="tensorProductWithQbit">      
+            <h3>Tensor Product with Qbit </h3>               
+            <p>
+                If V and W are vector spaces corresponding to a qubit, each with standard basis {|0×, |1×},
+                then V ⊗ W has {|0× ⊗ |0×, |0× ⊗ |1×, |1× ⊗ |0×, |1× ⊗ |1×} as basis. The tensor product of two
+                single-qubit states a1|0× + b1|1× and a2|0× + b2|1× is a1a2|0× ⊗ |0× + a1b2|0× ⊗ |1× + a2b1|1× ⊗
+                |0× + a2b2|1× ⊗ |1×.
+                $$
+                    V  \text{    has th base    } \{ | 0 \rangle ,| 1 \rangle  \}  \\ 
+                    W  \text{    has base    } \{ | 0 \rangle ,| 1 \rangle  \}  \\ 
+                $$
+                The tensor product of two single-qubit is
+
+                $$
+                    T = V  \otimes  W     \text{     has base: } \\ 
+                    \{  | 0 \rangle \otimes | 0 \rangle,
+                        | 1 \rangle \otimes | 0 \rangle,
+                        | 0 \rangle \otimes | 1 \rangle,
+                        | 1 \rangle \otimes | 1 \rangle 
+                        \}                                  \\
+
+
+                        | v \rangle = a_v | 0 \rangle + b_v | 1 \rangle     \\                   
+                        | w \rangle = a_w | 0 \rangle + b_w | 1 \rangle     \\                   
+
+                        | v \rangle \otimes | w \rangle = \\
+                        a_v a_w| 0 \rangle \otimes | 0 \rangle + 
+                        b_v a_w| 1 \rangle \otimes | 0 \rangle + \\
+                        a_v b_w| 0 \rangle \otimes | 1 \rangle +
+                        b_v b_w| 1 \rangle \otimes | 1 \rangle 
+
+                $$
+
+
+pag 34 inizio If V and W are inner product spaces
+
+            </p>      
+        </article>
 
         <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->
