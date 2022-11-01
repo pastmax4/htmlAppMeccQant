@@ -158,13 +158,7 @@
             </p>
 
 
-            <div>
-                <br>                           
-                <p  class="maxP">    
-                    Hilbert space <br>            
-                    A Hilbert space H is a real or complex inner product space that is also  a <b> complete metric space </b> with respect to the distance function induced by the inner product.
-                </p>
-            </div>
+        
     
 
             
@@ -181,14 +175,108 @@
 
                 \lambda    \text{   autovalore }\\
                 | l \rangle    \text{   autovettore }
-                
                 $$
-        
+            
+                esempio
+                $$ M=
+                \begin{pmatrix}
+                0 & -1 \\  
+                1 & 0 \\
+                \end{pmatrix} \\
+
+                l=   \begin{pmatrix}
+                1  \\  
+                i \\
+                \end{pmatrix} \\
+
+                \lambda = -i  \\
+
+                \begin{pmatrix}
+                0 & -1 \\  
+                1 & 0 \\
+                \end{pmatrix} 
+                \begin{pmatrix}
+                1  \\  
+                i \\
+                \end{pmatrix} =
+
+                1 \begin{pmatrix}
+                0  \\  
+                1  \\
+                \end{pmatrix} +
+                i \begin{pmatrix}
+                -1 \\  
+                0 \\
+                \end{pmatrix} =
+                \begin{pmatrix}
+                -i\\  
+                1\\
+                \end{pmatrix} =
+                (-i)\begin{pmatrix}
+                1  \\  
+                i \\
+                \end{pmatrix} 
+
+                $$
+
             </p>        
         </article>
 
+        <article id="coniugazioneHermitiana">    
+            <h3>Coniugazione Hermitiana</h3>      
+            <p> 
+                $$ \boldsymbol{M} | A \rangle = | B \rangle   $$
+
+                $$    \sum_{i=1}^N  m_{ji} \alpha_i  =   \beta_j  $$
+                prendiamo il complesso coniugato
+                $$    \sum_{i=1}^N  m_{ji}^* \alpha_i^*  =   \beta_j^*  $$
+
+                Proviamo a scrivere il prodotto matriciale usando i bra al posto dei ket. <br>
+                \( | A \rangle \) diventa un bra complesso coniugato passa da colonna riga. <br>
+                Le sue componenti ora moltiplicano le righe quindi:
+
+                $$      
+                
+                \begin{pmatrix}
+                \alpha_1^* & \alpha_2^* &   \alpha_3^*  \\                    
+                \end{pmatrix} 
+                \begin{pmatrix}
+                                m_{11}^* \
+                                m_{21}^* \
+                                m_{31}^* \ \\
+                                m_{12}^* \
+                                m_{22}^* \
+                                m_{32}^* \ \\
+                                m_{13}^* \
+                                m_{23}^* \
+                                m_{33}^* \ \\
+                \end{pmatrix} =
+    
+                \langle A |   \boldsymbol{M}^{\dagger}   
+            
+                $$
+                L'hermitiana è la colplessa coniugata della trasposta:
+
+                $$
+
+                \boldsymbol{M}^{\dagger}   = [ \boldsymbol{M}^{T} ]^*
+                    
+                $$
+                
+                Dunque:
+
+                $$ 
+                \boldsymbol{M} | A \rangle = | B \rangle   \\
+
+                \langle A |  \boldsymbol{M}^{\dagger}    = \langle B |
+                
+                $$
+            </p>        
+        </article>
         
-                <!-- --------------------------------------------- -->        
+pag 47 operatori hermitiani
+
+        <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->
         <hr>
         <hr>
