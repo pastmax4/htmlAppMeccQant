@@ -173,10 +173,7 @@
         <article id="tensorProductWithQbit">      
             <h3>Tensor Product with Qbit </h3>               
             <p>
-                If V and W are vector spaces corresponding to a qubit, each with standard basis {|0×, |1×},
-                then V ⊗ W has {|0× ⊗ |0×, |0× ⊗ |1×, |1× ⊗ |0×, |1× ⊗ |1×} as basis. The tensor product of two
-                single-qubit states a1|0× + b1|1× and a2|0× + b2|1× is a1a2|0× ⊗ |0× + a1b2|0× ⊗ |1× + a2b1|1× ⊗
-                |0× + a2b2|1× ⊗ |1×.
+                V and W are vector spaces corresponding to a qubit
                 $$
                     V  \text{    has th base    } \{ | 0 \rangle ,| 1 \rangle  \}  \\ 
                     W  \text{    has base    } \{ | 0 \rangle ,| 1 \rangle  \}  \\ 
@@ -202,12 +199,74 @@
                         b_v b_w| 1 \rangle \otimes | 1 \rangle 
 
                 $$
-
-
-pag 34 inizio If V and W are inner product spaces
-
             </p>      
         </article>
+
+        <article id="tensorProductAndInnerProduct">      
+            <h3>Tensor Product and inner product </h3>               
+            <p>
+                In V and W is defined an inner product, in \( T = V  \otimes  W  \). <br>
+                In T we define:
+                $$
+                | v1 \rangle  , |v2 \rangle  \in V  \text{    and    }  | w1 \rangle  ,  |w2 \rangle  \in W   \\
+
+                (\langle  v2 | \otimes \langle  w2 |) \cdot ( |v1 \rangle \otimes | w1 \rangle) =
+                \langle  v2 |  v1 \rangle   \langle  w2 |  w1 \rangle 
+
+                $$
+            </p>
+        </article>
+
+        <article id="tensorProductAndInnerProduct">      
+            <h3>Tensor Product and basis </h3>               
+            <p>
+                The tensor product of two unit vector is a unit vector. <br>
+                Given orthonormal basis:
+
+                $$
+                A= \{ | \alpha_1 \rangle ,| \alpha_2 \rangle ,...,| \alpha_N \rangle    \}  \\ 
+                B= \{ | \beta_1 \rangle ,| \beta_2 \rangle ,...,| \beta_M \rangle    \}   \\
+                T = V  \otimes  W     
+                $$
+                The basis fo T is also orthonormal:
+                $$
+                    \{ | \alpha_i \rangle   | \beta_j \rangle   \}  \\ 
+                    dimension = dim(V) \times dim(W)
+                $$
+                The tensor product of n two-dimesional vector spaces 
+
+                $$
+                T =   V1  \otimes  V1  \otimes  ...\otimes V_n  \\
+                dim(V_i)=2 \\
+                dim(T) = 2^N
+                $$
+            </p>
+        </article>
+
+
+        <article id="entangledStates">      
+            <h3>Entangled States </h3>               
+            <p>
+                Given
+                $$
+                A= \{ | \alpha_1 \rangle ,| \alpha_2 \rangle ,...,| \alpha_N \rangle    \}  \\ 
+                B= \{ | \beta_1 \rangle ,| \beta_2 \rangle ,...,| \beta_M \rangle    \}   \\
+                T = V  \otimes  W     
+                $$
+                \( | t \rangle \in  V  \otimes  W  \)  can always be expressed as linear combination
+                of their basis but
+                most part of  \( | t \rangle   \) cannot be written as the tensor product 
+                of elements of V and W. <br>
+                These states are called <b> entangled states.</b>
+                
+
+            </p>
+        </article>
+
+
+
+
+        pag 34  The state Space of an ...
 
         <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->
