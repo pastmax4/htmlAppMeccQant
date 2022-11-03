@@ -236,7 +236,7 @@
                 The tensor product of n two-dimesional vector spaces 
 
                 $$
-                T =   V1  \otimes  V1  \otimes  ...\otimes V_n  \\
+                T =   V_1  \otimes  V_2  \otimes  ...\otimes V_n  \\
                 dim(V_i)=2 \\
                 dim(T) = 2^N
                 $$
@@ -259,6 +259,65 @@
                 of elements of V and W. <br>
                 These states are called <b> entangled states.</b>
                 
+
+            </p>
+        </article>
+
+        <article id="theStateSpaceOfAnNQubitSystem">      
+            <h3>The State Space of an n-Qubit System </h3>               
+            <p>
+                let V i be the vector space with base \(  \{ | 0 \rangle ,| 1 \rangle    \}   \) <br>
+                The tensor product of N vector space v is:
+                $$
+                T =   V_1  \otimes  V_2  \otimes  ...\otimes V_n  \\
+
+                Base=   \\
+                \{| 0 \rangle_n ,| 0 \rangle_{n-1} ,...,| 0 \rangle_0,| 0 \rangle_0,  \\
+                  | 0 \rangle_n ,| 0 \rangle_{n-1} ,...,| 0 \rangle_0,| 1 \rangle_0, \\
+                  | 0 \rangle_n ,| 0 \rangle_{n-1} ,...,| 1 \rangle_0,| 0 \rangle_0,\\
+                  | 0 \rangle_n ,| 0 \rangle_{n-1} ,...,| 1 \rangle_0,| 1 \rangle_0, \\
+                  ... \\
+                  | 1 \rangle_n ,| 1 \rangle_{n-1} ,...,| 1 \rangle_0,| 1 \rangle_0  \} \\
+
+                $$
+                Dropping the subscript
+                $$
+                Base=   \\
+                \{| 0 \rangle ,| 0 \rangle ,...,| 0 \rangle,| 0 \rangle,  \\
+                  | 0 \rangle ,| 0 \rangle ,...,| 0 \rangle,| 1 \rangle,  \\
+                  | 0 \rangle ,| 0 \rangle ,...,| 1 \rangle,| 0 \rangle,  \\
+                  | 0 \rangle ,| 0 \rangle ,...,| 1 \rangle,| 1 \rangle,  \\
+                  ... \\
+                  | 1 \rangle ,| 1 \rangle,...,| 1 \rangle,| 1 \rangle  \} \\
+                $$
+                We have \(   2^{n-1}  \) vectors. <br>
+                Since the tensor product space corresponding to an n-qubit system occurs 
+                so frequently
+                throughout quantum information processing, an even more compact 
+                and readable notation is
+                $$
+                Base=   \\
+                \{| 0...00 \rangle ,  
+                  | 0...01 \rangle ,  
+                  | 0...10 \rangle ,  
+                  | 0...11 \rangle ,
+                  ...,  
+                  | 1...11 \rangle                      
+                    \} \\
+                $$              
+                or
+
+                $$
+                Base=   \\
+                \{| 0 \rangle ,  
+                  | 1 \rangle ,  
+                  | 2 \rangle ,  
+                  | 3 \rangle ,
+                  ...,  
+                  | 2^n-1 \rangle                      
+                    \} \\
+                $$
+
 
             </p>
         </article>
