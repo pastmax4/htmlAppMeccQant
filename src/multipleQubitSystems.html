@@ -290,7 +290,7 @@
                   ... \\
                   | 1 \rangle ,| 1 \rangle,...,| 1 \rangle,| 1 \rangle  \} \\
                 $$
-                We have \(   2^{n-1}  \) vectors. <br>
+                We have \(   2^{n}  \) vectors. <br>
                 Since the tensor product space corresponding to an n-qubit system occurs 
                 so frequently
                 throughout quantum information processing, an even more compact 
@@ -364,7 +364,6 @@
             <h3>Example of tensor product </h3>               
             <p>
                 
-
                 $$
                 \frac{1}{\sqrt{2}}(| 0 \rangle + | 1 \rangle ) \otimes \frac{1}{\sqrt{2}}(| 0 \rangle + | 1 \rangle ) \\
                 =\frac{1}{4}(| 00 \rangle + | 01 \rangle + | 10 \rangle + | 11 \rangle )
@@ -372,7 +371,49 @@
             </p>
         </article>
 
-        pag 38 Entangled States
+        <article id="entangledStates">      
+            <h3>Entangled States</h3>               
+            <p>
+                Let's take two single qubit state \(   | s \rangle,| t \rangle  \). <br>
+                If we do the tensor product we have:
+            $$
+            | s \rangle= a_1| 0 \rangle  + b_1| 1 \rangle \\
+            | t \rangle= a_2| 0 \rangle  + b_2| 1 \rangle \\
+
+            | r \rangle= | s \rangle \otimes | t \rangle  = \\
+
+            (a_1| 0 \rangle  + b_1| 1 \rangle) \otimes ( a_2| 0 \rangle  + b_2| 1 \rangle) = \\
+            a_1a_2| 00 \rangle  + a_1b_2| 01 \rangle + 
+            a_2b_1| 00 \rangle  + b_1b_2| 01 \rangle 
+            $$
+
+            This in general, but if we take a particular state, for example:
+
+            $$
+            | r_0 \rangle =  \frac{1}{\sqrt{2}} (| 00 \rangle  + | 11 \rangle)  \\
+            $$
+            The solutions riquire:
+            $$
+            a_1b_2=0
+            $$
+            but this implies that \( a_1=0    \) or \(  b_2=0  \) impling also  
+            \( a_1a_1  =0    \) or \(  b_2 b_2=0  \) <br>
+
+        </p>
+
+        This means that we could not find two single state to generate the state \(  | r_0 \rangle \) <br>
+        <p class="riquadro">
+            States that cannot be written as tensor product of single qubit
+            states are called <b> entangled states </b>
+        </p>
+
+
+
+        </article>
+
+
+
+        pag 38 example 3.2.1
 
         <!-- --------------------------------------------- -->        
         <!-- --------------------------------------------- -->
