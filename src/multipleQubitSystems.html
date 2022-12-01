@@ -467,16 +467,34 @@
         <article id="exampleMultipleMeaningsOfEntanglement. ">      
             <h3>Example - Multiple meanings of entanglement.</h3>               
             <p>
-                Let'take this state:
+                Let's take this state:
                 $$
-                | \psi \rangle =  \frac{1}{\sqrt{2}} ( |00\rangle + |11\rangle  + |22\rangle + |33\rangle  )= \\
-                =\frac{1}{\sqrt{2}} ( |0000\rangle + |0101\rangle  + |1010\rangle + |1111\rangle  )
+                | \psi \rangle =  \frac{1}{2} ( |00\rangle + |11\rangle  + |22\rangle + |33\rangle  )= \\
+                =\frac{1}{2} ( |0000\rangle + |0101\rangle  + |1010\rangle + |1111\rangle  )
 
                 $$
 
-                This state is entangled, since it cannot be expressed as the tensor product of four single-qubit states. 
-                pag 39 example 3.2.3 da finire
+                This state is <b>entangled</b>, since it cannot be expressed as the tensor
+                product of four single-qubit states. 
+                <br> <br>
 
+                Try this decomposition:
+                $$
+                | \psi \rangle =  \frac{1}{2} 
+                    (   |0\rangle_1  |0\rangle_2  |0\rangle_3  |0\rangle_4 +
+                        |0\rangle_1  |1\rangle_2  |0\rangle_3  |1\rangle_4 + \\
+                        |1\rangle_1  |0\rangle_2  |1\rangle_3  |0\rangle_4 +
+                        |1\rangle_1  |1\rangle_2  |1\rangle_3  |1\rangle_4 )= \\
+                        =\frac{1}{\sqrt{2}}( |0\rangle_1  |0\rangle_3  + |1\rangle_1  |1\rangle_3)  \otimes
+                        \frac{1}{\sqrt{2}}( |0\rangle_2  |0\rangle_4  + |1\rangle_2  |1\rangle_4)
+                $$
+                Taking first and third qubit and  the second and fourth qubit
+                the state \( \psi  \) is <b> is not entangled</b>
+                <br> <br>
+
+                On the other hand \( \psi  \) is entangled taking first and second qubit and  the third
+                and fourth qubit.
+pag. 40 It is important to recognize that the notion 
             </p>
         </article>
 
