@@ -33,9 +33,13 @@ h4 {
     margin: 0 auto;
     border: 2px solid rgb(78, 167, 5);
     padding: 20px;
-  }
- 
+}
+
 p.riquadro {
     font-family: Verdana, Helvetica, sans-serif;
     border: 2px solid rgb(22, 214, 105);
+}
+
+div {
+    column-count: 2;
 }
