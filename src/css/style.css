@@ -40,6 +40,14 @@ p.riquadro {
     border: 2px solid rgb(22, 214, 105);
 }
 
-div {
+
+
+.duecolonne{
     column-count: 2;
+}
+
+
+.classriquadro {
+    font-family: Verdana, Helvetica, sans-serif;
+    border: 2px solid rgb(22, 214, 105);
 }
