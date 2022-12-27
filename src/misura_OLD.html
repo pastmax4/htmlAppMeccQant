@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+-->
+<body>
+    <head>
+        <h1>La Misura</h1>
+        <p>
+            Leonard Susskind, Art Friedman - Meccanica quantistica - Pag.3 </p>
+        </p>
+    </head>
+    <main>
+        <article id="misura_spin">
+            <h3>Sistema di misura</h2>
+            <p> 
+                <ul>
+                    <li>Il sistema ha due stati, due gradi di liberta: &sigma; = up/down.</li>
+                    <li>L'apparato di misura lo indichiamo con<span style="font-style: italic"> A. </span> (Fig.1)
+                    E' dotato di un indicatore per leggere la misura up/down e deve essere allineato lungo una direzione,
+                    cioè ha una freccia che indica la sua orientazione.<strong> La sua orientazione influenza la misura.</strong>
+                    </li>
+                </ul>
+
+                <figure>
+                    <img src="../img/apparatoA_01.jpg" alt="Apparato di misura" title="Apparato di misura" width="381"
+                        height="206">
+                    <figcaption>
+                        Fig.1 Apparto di Misura <span style="font-style: italic"> A. </span>
+                    </figcaption>
+                </figure>
+            </p>
+        </article>
+        <article id="misurazione">
+            <h3>Misura dello spin di un elettrone</h3>
+            <p>
+                <h4>Fase 1 della misurazione</h4>
+                Vogliamo misurare lo spin di un elettrone, di cui non conosciamo nulla.
+                Lo spin dell'elettrone può dare solo due risultati: Up (+1), Down (-1).
+                Orientiamo l'apparato lungo l'asse z. Una scelta arbitraria.
+                Prima della misura la finestrella di <span style="font-style: italic"> A. </span> è vuota. 
+                Quando facciamo la misura l'elettrone interagisce con <span style="font-style: italic"> A, </span>
+                e nella finestrella leggiamo +1 o -1. Supponiamo che il risultato sia +1 (Fig.2)
+                <figure>
+                    <img src="img/MisuraZ2.jpg" alt="Misura dell spin" title="Misura dello spin" width="513"
+                        height="229">
+                    <figcaption>
+                        Fig.2 Misura dello spin
+                    </figcaption>
+                </figure>
+                <h4>Fase 2 della misurazione</h4>
+                Resettiamo l'apparato di misura  <span style="font-style: italic"> A, </span>e la finestrella
+                di misura è vuota. Lasciamo l'apparato lungo +z e ripetiamo la misura con lo stesso elettrone.
+                Otteniamo ancora +1.<br>
+                La misura è confermata. Anche se ripetessimo altre misure si otterrebbe sempre +1. <br>
+                Fino a questo punto nessuna differenza con la fisica classica.
+                <h4>Fase 3 della misurazione</h4>
+                Ruotiamo l'apparto  <span style="font-style: italic"> A </span> di 180° (fig.3).       
+                <figure>
+                    <img src="img/MisuraZ.jpg" alt="Misura dello spin" title="Misura dello spin" width="513"
+                    height="229">
+                    <figcaption>
+                        Fig.3 Misura dello spin
+                    </figcaption>
+                </figure>
+                La lettura dello spin ora è -1. Abbiamo capovolto l'apparato e lo spin cambia da +1 a -1. <br>           
+          
+        
+            <h4>Considerazioni sulle misure</h4>
+          
+                Lo spin potrebbe essere un vettore e l'apparato <span style="font-style: italic"> A </span>
+                misura la componente di &sigma; lungo il proprio il proprio asse, in questo caso z.
+                <figure>
+                    <img src="img/MisuraZ3.jpg" alt="Misura dello spin" title="Misura dello spin" width="513"
+                    height="229">
+                    <figcaption>
+                        Fig.4 Misura dello spin
+                    </figcaption>
+                </figure>
+            
+            <h4>Fase 3 della misurazione</h4>
+            
+                Ruotiamo  <span style="font-style: italic"> A </span> di 90° e ripetiamo le misure 
+                sullo stesso elettrone più volte: otteniamo una sequenza casuale di +1 e -1. <br>
+                <figure>
+                <img src="img/MisuraZ4.jpg" alt="Misura dello spin" title="Misura dello spin" width="513"
+                    height="229">
+                    <figcaption>
+                        Fig.5 Misura dello spin
+                    </figcaption>
+                </figure>
+            </p>
+            <h4>Considerazioni sulle misure: aspetto quantistico</h4>
+            
+                Se lo spin fosse un vettore dovremmo aspettarci la componente di &sigma; lungo +x,
+                invece abbiamo una sequenza casuale di +1 e -1. <br>
+                <b>L'interpretazione quantistica </b> è che la prima misura di 
+                &sigma; definisce lo stato del sistema, le misure successive saranno sempre uguali alla prima misura,
+                nel nostro caso &sigma;<sub>z</sub>=+1. Lo spin può avere solo due valori +1 o -1, quindi se &sigma;<sub>z</sub>=+1, lungo x, &sigma; deve essere zero.
+                La sequenza casuale di +1 e -1 si spiega dicendo che zero è il valore medio delle misure.
+                In media la componente lungo x dello spin è zero. <br><br>
+                In generale diciamo che la prima misura prepara il sistema, definendone lo stato stato 
+                che sarà mantenuto per tutta la restante storia del sistema.
+            <br><br>
+                Se ruotiamao  <span style="font-style: italic"> A </span> di un angolo &theta; e
+                ripetiamo una serie di misure otteniamo ancora una sequenza casuale di +1 e -1 ma ora
+                il valor medio sarà pari al cos(&theta;) cioè proprio la componente del vettore &sigma; di modulo 1
+                lungo +z proiettato lungo la direzione &theta;, se questa è lungo un versore  \( \vec n\ \)
+                allora usando la notazione di media per &sigma;:
+
+
+                $$ \langle \sigma \rangle = \vec z\ \cdot \vec n\ $$
+                
+                <figure>
+                    <img src="img/nperz.jpg" alt="Misura dello spin" title="Misura dello spin" width="423" height="390">
+                    <figcaption>
+                        Fig.4 Componente lungo &theta;
+                    </figcaption>
+                </figure>
+
+            </p>
+
+        </article>
+    </main>
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>
