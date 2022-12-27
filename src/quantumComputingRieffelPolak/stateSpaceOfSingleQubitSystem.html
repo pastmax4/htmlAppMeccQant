@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+    https://www.physicsread.com/latex-ket-notation/
+
+    Formule matematiche
+    https://it.wikipedia.org/wiki/Aiuto:Formule_matematiche_TeX
+
+-->
+<body>
+    <head>
+        <h1>The State Space of a Single-Qubit System</h1>
+        <p>
+            Eleanor Rieffel Wolffang Polak - Quantum computing - Pag.21</p>
+        </p>
+    </head>
+    <hr>
+    <main>
+        <article id="stateSpaceOfSingleQubit">      
+            <h3>The State Space of a Single-Qubit System </h3>               
+            <p>
+                The state space of a classical or quantum physical system is the set of all possible states 
+                of the system.  <br> <br>
+                Depending on which properties of the system, a state 
+                consists of any combination of the positions, momenta, polarizations, spins, energy, and so on. <br>
+                When we are considering only polarization states of a single photon,
+                the state space is all possible polarizations.  <br>
+                More generally, the state space for a single qubit, no
+                matter how it is realized, is the set of possible qubit values                
+            </p>
+            </article>
+
+        <article id="stateSpaceOfSingleQubit">      
+            <h3>Global phase   </h3>               
+            <p>
+                For us unit vectors that differ only for a phase are equivalent and represent the same state.
+
+                $$ | v'  \rangle= c| v \rangle \\
+                    c= e^{i\phi} 
+                
+                $$
+
+                The multiple by which two vectors
+                representing the same quantum state differ is called the <b> global phase </b> and has no 
+                physical meaning.
+                $$    | v'  \rangle \sim c| v \rangle $$
+            </p>
+
+
+            <h3>Relative Phases and equivalent state vector  </h3>               
+            <p>
+
+                
+                $$ |v \rangle =    a|0 \rangle +  b|1\rangle   $$
+
+                The <b> relative phase </b> (in the standard basis) is the phase difference in between 
+                the two complex numbers a and b.  <br>
+                Two superpositions of two state vector whose amplitudes have the same magnitudes but that differ
+                in a relative phase represent different states. <br>
+
+                Relative phase is meaningful. <br>
+                Global phase has no physical meaning.
+            </p>            
+        </article>
+
+        <article id="specialBasis">      
+            <h3>Special Baseis  </h3>  
+            <p>
+                Hadamard basis:
+                $$ 
+                |+ \rangle =    \frac{1}{\sqrt{2}}(|0 \rangle +  |1\rangle)  \tag{1} \\
+                |- \rangle =    \frac{1}{\sqrt{2}}(|0 \rangle -  |1\rangle)            \\
+                
+                $$
+
+                $$ 
+                |i \rangle =    \frac{1}{\sqrt{2}}(|0 \rangle +  i\rangle)  \tag{1} \\
+                |-i \rangle =    \frac{1}{\sqrt{2}}(|0 \rangle - i|1\rangle)            \\
+                
+                $$
+            
+            </p>            
+        </article>
+
+        <article id="geometricViewsStateSpaceSingleQubit">      
+            <h3>Geometric Views of the State Space of a Single Qubit  </h3>  
+            <p>
+                Vectors to represent quantum states. <br>
+                It is helpful to have models of the
+                single-qubit state space in which there is a one-to-one correspondence between states and points
+                in the space. <br>
+                These models are just different ways of looking at complex projective space of
+                dimension 1.  <br>
+                Complex projective space of dimension 1 can be viewed as a sphere.
+                First we show that it can be viewed as the extended complex plane, the complex plane C together
+                with an additional point traditionally labeled ∞.           
+            </p>            
+        </article>
+
+        <article id="extendedComplexPlane">      
+            <h3>Extended Complex Plane  </h3>  
+            <p>
+                Correspondence between the set of all complex numbers and
+                single-qubit states is given by:
+
+                $$  a|0 \rangle +  b|1\rangle  \to b/a = \alpha \\
+                    a \neq 0  \text{  and  }  b \neq 1
+                $$
+
+                We need to add to complex plain the point  ∞. <br>
+                We define:
+
+                $$
+                \infty \leftrightarrow   |1 \rangle
+                $$
+
+                For example:
+                $$
+                |1 \rangle \to     \infty  \\
+                |0 \rangle \to     0        \\
+
+                |+ \rangle \to     +1  \\
+                |- \rangle \to    -1    \\
+
+                |i \rangle \to     i  \\
+                |-i \rangle \to    -i    \\
+                $$
+            </p>            
+        </article>
+
+        <article id="blochSphere ">      
+            <h3>Bloch Sphere   </h3>  
+            <p>
+
+                <figure>
+                    <img src="../img/quantumCComputing/blochSphere.jpg" alt="Bloch Sphere" title="Bloch Sphere" width="300"
+                        height="278">
+                    <figcaption>
+                        Fig.1 Bloch Sphere <span style="font-style: italic"> </span>
+                    </figcaption>
+                </figure>
+
+            </p>            
+        </article>
+
+        <!-- --------------------------------------------- -->        
+        <!-- --------------------------------------------- -->
+        <hr>
+        <hr>
+        
+    </main> 
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>

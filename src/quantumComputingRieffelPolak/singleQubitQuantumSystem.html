@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+    https://www.physicsread.com/latex-ket-notation/
+
+-->
+<body>
+    <head>
+        <h1>Single-Qubit Quantum Systems</h1>
+        <p>
+            Eleanor Rieffel Wolffang Polak - Quantum computing - Pag.9</p>
+        </p>
+    </head>
+    <hr>
+    <main>
+        <article id="esperimento">      
+            <h3>The Quantum Mechanics of Photon Polarization: a Simple Experiment</h3>  
+            <p> 
+                This experiment can be performed by the reader using only minimal equipment: a laser pointer and three polaroids
+                (polarization filters), readily available from any camera supply store. <br><br>
+
+                <b>#1</b> Shine a beam of light on a projection screen. When polaroid A is placed between the light source
+                and the screen, the intensity of the light reaching the screen is reduced. Let us suppose that the
+                polarization of polaroid A is horizontal.
+
+                <figure>
+                    <img src="../img/quantumCComputing/esperimento01.jpg" alt="Apparato di misura" title="Apparato di misura" width="600"
+                        height="344">
+                    <figcaption>
+                        Fig.1 Single polaroid attenuates unpolarized light by 50 percent <span style="font-style: italic"> A. </span>
+                    </figcaption>
+                </figure>
+
+                <b>#2</b> Next, place polaroid C between polaroid A and the projection screen. If polaroid C is rotated
+                so that its polarization is orthogonal (vertical) to the polarization of A, no light reaches the screen
+                (figure 2).
+
+                <figure>
+                    <img src="../img/quantumCComputing/esperimento02.jpg" alt="Apparato di misura" title="Apparato di misura" width="600"
+                        height="408">
+                    <figcaption>
+                        Fig.2 Two orthogonal polaroids block all photons. </span>
+                    </figcaption>
+                </figure>
+
+
+                <b>#3</b> Finally, place polaroid B between polaroids A and C. <br>
+                One might expect that adding another
+                polaroid will not make any difference; if no light got through two polaroids, then surely no light
+                will pass through three! Surprisingly, at most polarization angles of B, light shines on the screen.
+                The intensity of this light will be maximal if the polarization of B is at 45 degrees to both A and
+                C (figure 3).
+
+                <figure>
+                    <img src="../img/quantumCComputing/esperimento03.jpg" alt="Apparato di misura" title="Apparato di misura" width="600"
+                        height="361">
+                    <figcaption>
+                        Fig.3 Inserting a third polaroid allows photons to pass. </span>
+                    </figcaption>
+                </figure>
+            </p>                    
+        </article>
+
+        <h3>Quantum Explanation</h3>  
+        <article id="spiegazione esperimento">      
+            <p>
+                Quantum mechanics models a photon’s polarization state by a unit vector, a vector of length
+                1, pointing in the appropriate direction. <br>
+                This is the representation of vertical and horizontal polarization respectively:
+
+                $$  |\to  \rangle ,  |\uparrow  \rangle $$
+
+
+                Call \( |v \rangle  \)  a vector representing a quantum state (according to Dirac’s notation). <br>
+                An arbitrary polarization can be expressed as a linear combination:
+                
+                $$  |v \rangle  \ = a|\uparrow  \rangle  +  b|\to  \rangle $$
+
+                \(  |\to  \rangle ,  |\uparrow  \rangle  \) are a basis. <br>
+                \( |v \rangle  \) is a superposition of  \(  |\to  \rangle ,  |\uparrow  \rangle  \). 
+                <br><br>
+
+                
+                The polaroid has a preferred axis, its polarization. <br>
+
+                When a photon with its own polarization meets a polaroid, the photon will get through vertical polarization 
+                with probability \( a^2  \) and through horizontal polarization with  probability \( b^2  \). <br>
+                In general the probability that a photon passes through the polaroid is the square of the magnitude 
+                of the amplitude of its polarization in the direction of the polaroid’s preferred axis. 
+                <figure>
+                    <img src="../img/quantumCComputing/polaroid01.jpg" alt="polarizzazione" title="Direzione di polarizzazione" width="200"
+                        height="185">
+                    <figcaption>
+                        Fig. Polaroid’s preferred axis </span>
+                    </figcaption>
+                </figure>
+
+                $$  p^2 = a^2 + b^2 $$
+
+
+                Furthermore, any photon that passes through the polaroid will be polarized in the direction of
+                the polaroid’s preferred axis. In the experiment, any photons that pass through polaroid A
+                will leave polarized in the direction of polaroid A’s preferred axis. In Fig. 1 we have horizontal
+                polarization, so all photons passing through A will be horizontal polarized with 
+                no amplitude in the vertical direction: no chance of passing through polaroid C (Fig.2) 
+                vertically oriented. For this reason, no light reaches the screen.
+                If C had a different orientation it would have a component along horizontal axis with a probability
+                not to be stopped. <br>
+                Inserting polaroid B (its angle is 45°) photons have 1/2 probability to pass through and now all photons
+                emerging from B are polarized in this direction. When these photons hit polaroid C, half have amplitude
+                in the vertical direction and can hit the screen.
+            </p>
+        </article>
+    
+        <h3>Single Quantum Bit</h3>  
+        <article id="quantum bit">      
+            <p>
+                The space of possible polarization states of a photon is an example of a quantum bit, or qubit. A
+                qubit has a continuum of possible values:
+                $$  |v \rangle  \ = a|\uparrow  \rangle  +  b|\to  \rangle $$
+                
+                The amplitudes a and b can be complex numbers (in this case circular polarization).
+                the set of all possible states of a physical system is called the state space of the
+                system. <br>
+                Any quantum mechanical system that can be modeled by a two-dimensional complex
+                vector space can be viewed as a qubit: photon polarization, electron spin, and the ground state
+                together with an excited state of an atom. <br>
+                The two-state label for these systems does not mean that the state space has only two states—it has infinitely many—but rather that all possible states can be
+                represented as a linear combination, or superposition, of just two states
+            </p>
+
+            <p class="riquadro">
+                The two-state label for these systems does not mean that the
+                state space has only two states—it has infinitely many—but rather that all possible states can be
+                represented as a linear combination, or superposition, of just two states.
+            </p>
+
+            <p>
+                For a two-dimensional complex vector space to be viewed as a qubit, two linearly independent states, 
+                must be distinguished. For the theory of quantum information processing, all two-state systems,
+                whether they be electron spin or energy levels of an atom, are equally good. From a practical
+                point of view, it is as yet unclear which two-state systems will be most suitable for physical
+                realizations of quantum information processing devices such as quantum computers. <br>
+                Two linearly independent states can be labeled as:
+
+                $$  |0  \rangle ,  |1  \rangle $$
+            </p>
+        </article>
+
+
+        <h3>Ket and spaces</h3>  
+        <article id="ket space">      
+            <p>
+                Given complex vector space V and a set of vectors S. <br>
+                S generates the complex vector space V if:
+
+                $$  |v  \rangle = a_1 |s_1 \rangle + a_2 |s_2 \rangle + ... a_n |s_n \rangle $$
+
+                for every \( |v \rangle \) in  V and for some elements  \( |s_i \rangle \)in  S with complex numbers \( a_i \). <br>
+                <br>
+                Given a set of vectors S, the subspace of all linear combinations of vectors in S is called the span of S and
+                is denoted span(S). <br> <br>
+
+                A set of vectors B for which every element of V can be written uniquely as a linear combination
+                of vectors in B is called a   <b>basis </b> basis for V.
+
+                <br> <br>
+                In a two-dimensional vector space, any two vectors that are not multiples of 
+                each other form a basis.
+            </p>
+        </article>
+
+
+        <h3>Inner product</h3>  
+        <article id="inner product">      
+            <p>
+                An inner product or dot product, on a complex vector space V is a complex function
+                defined on pairs of vectors in V, we rapresent it as:
+
+                $$  \langle v_2 | v_1 \rangle $$
+
+                inner product must satisfy these properties:
+
+                <ul>
+                    <li>\(  \langle v | v \rangle \) is non-negative real </li>
+                    <li> \(  \langle v_1 | v_2 \rangle  =     ( \langle v_2 | v_1 \rangle  )^*     \)</li>
+                    <li>\(  (a\langle v_2 | + b\langle v_3 |) | v_1 \rangle  =  a\langle v_2 | v_1 \rangle + b\langle v_3 | v_1 \rangle    \)   </li>
+                </ul> 
+                Inoltre valgono queste proprietà
+                <ul>
+                    <li> \(  \langle v_1 | v_2 \rangle  =  0 \)  orthogonal   </li>
+                    <li> A set of vectors is orthogonal if all of its members are orthogonal to each other </li>
+                    <li>\(  | |v  \rangle |  = \sqrt[2]{ \langle v  |v  \rangle }   \)   length, or norm, of a vector   </li>
+                    <li>\(  \langle v  |v  \rangle  =1   \)     unit length </li>
+                    <li>\( \{  |\beta_1  \rangle,|\beta_2  \rangle,...,|\beta_n  \rangle \}  \)            A set of vectors is said to be orthonormal if all of its elements are of length
+                        one and orthogonal to each other: \(  \langle \beta_i | \beta_j \rangle = \delta_{ij}   \)    </li>
+                    
+                    <li>when we say basis we mean orthonormal basis unless we say otherwise </li>
+                </ul> 
+            </p>
+        </article>
+        
+        <h3>Quantum bit</h3>  
+        <article id="Quantum bit">      
+            <p>
+                For the state space of a two-state system to represent a quantum bit, two orthonormal distinguished
+                must be specified, we labeled these as:
+                $$  | 0 \rangle $$
+                $$  | 1 \rangle $$
+
+                the states may be chosen arbitrarily. For instance, in the case of photon polarization,
+                we may choose as:
+
+                $$  | 0 \rangle \to    |\to  \rangle $$
+                $$  | 1 \rangle \to     |\uparrow  \rangle $$
+
+                qubits can take on not only the values \( |0 \rangle ,  |1\rangle   \) but also any superposition
+                of these values <br>
+
+                \begin{equation}
+                    | s \rangle =  a| 0 \rangle + b| 1 \rangle
+                    \quad\text{with}\quad    a^2+b^2=1
+                \end{equation}
+            </p>
+        </article>
+
+        <h3>Matrix notation </h3>  
+        <article id="Matrix notation">      
+            <p>
+                Vectors and linear transformations can be written using matrix notation. Define the basis:
+
+                $$  |\beta_1 \rangle ,  |\beta_2\rangle   $$
+                so we rapresent a ket as:
+                $$ |v \rangle = a|\beta_1 \rangle +  b|\beta_2\rangle   $$
+                $$  | v \rangle =
+                \begin{pmatrix}
+                v_1\\
+                v_2\\
+                \end{pmatrix}
+                $$
+
+                $$  | q \rangle =
+                \begin{pmatrix}
+                q_1\\
+                q_2\\
+                \end{pmatrix}
+                $$
+
+                
+                $$  | v \rangle^T = \langle v |=
+                \begin{pmatrix}
+                v_1^* \
+                v_2^* \                
+                \end{pmatrix}
+                $$
+
+                $$
+                \langle v | |q \rangle =  \langle v | q \rangle =
+                \begin{pmatrix}
+                v_1^* \
+                v_2^* \                
+                \end{pmatrix}
+                \begin{pmatrix}
+                q_1\\
+                q_2\\
+                \end{pmatrix}=
+                v_1^*q_1+v_2^*q_2                
+                $$
+
+                In general the standard inner product is:
+                $$  \langle a |b \rangle  = \sum_{i=1}^N a_i^*b_i  $$
+
+                and so:
+                $$   |v \rangle =  a|0 \rangle + b |1 \rangle   $$
+                $$  \langle 0|1 \rangle  = 0  $$
+                $$  \langle 0|0 \rangle  = 1  $$
+                $$  \langle 1|1 \rangle  = 1  $$
+                $$  \langle 0|v \rangle  = a  $$
+                $$  \langle 1|v \rangle  = b  $$
+                $$  | 0 \rangle =
+                \begin{pmatrix}
+                1\\
+                0\\
+                \end{pmatrix}
+                $$
+                $$  | 1 \rangle =
+                \begin{pmatrix}
+                0\\
+                1\\
+                \end{pmatrix}
+                $$
+                $$  | v \rangle =
+                \begin{pmatrix}
+                a\\
+                b\\
+                \end{pmatrix}
+                $$
+            </p>
+        </article>
+
+        <h3>Measurements of single-qubit systems</h3>  
+        <article id="Measurements of single-qubit systems">      
+            <p>
+                Quantum theory postulates that any device that measures a two-state quantum system must have
+                two preferred states that form an orthonormal basis for the associated vector space:
+
+                $$ \{  u, u_{\bot }  \}$$
+                $$ |v \rangle =  a|u \rangle + b |u_{\bot } \rangle   $$
+
+                Measurement of a state transforms the state into one of the measuring
+                device’s associated basis vectors  \(   u, u_{\bot }  \);
+                
+                the state \(   |v \rangle  \) is measured as  \(|u \rangle \) with probability \(   a^2  \) and
+                as  \(  |u_{\bot }  \rangle  \) with probability \(   b^2  \)
+                
+                <br>
+            </p>
+            <p class="riquadro">
+                    This behavior of measurement is an axiom of quantum mechanics. It is not derivable from
+                    other physical principles; rather, it is derived from the empirical observation of experiments with
+                    measuring devices.
+            </p>
+            <p class="riquadro">
+                Measurement of a quantum state changes the state. If a state 
+                $$ |v \rangle =  a|u \rangle + b |u_{\bot } \rangle   $$
+                is measured as
+                $$|u \rangle $$
+                then the state \(   |v \rangle   \) changes to  \(  |u \rangle  \).
+                
+                A second measurement with respect to the same basis will
+                return 
+                $$  |u \rangle  $$
+                with probability 1. <br>
+
+                Thus, unless the original state happens to be one of the basis states,
+                a single measurement will change the original state, making it impossible to determine the original state
+                from any sequence of measurements.
+            </p>
+
+            <p>
+                Because the result of measuring a superposition is probabilistic, some people are tempted
+                to think of the state as a probabilistic mixture of  \( |0 \rangle,  |1 \rangle \). It is not.
+
+
+                Rather, the vector state is a definite state, which, when measured in certain bases, gives deterministic results,
+                while in others it gives random results: a photon with a certain polarization 
+                behaves deterministically when measured with respect to the Hadamard basis for example but it gives
+                random results when measured with respect to the standard basis.                
+            </p>
+
+            <p class="riquadro">
+                Given that qubits can take on any one of infinitely many states, one might hope that a single
+                qubit could store lots of classical information. <br>
+                However, the properties of quantum measurement severely restrict the amount of information that 
+                can be extracted from a qubit. Information about a quantum bit can be obtained only by measurement, 
+                and any measurement results in one of only
+                two states, the two basis states associated with the measuring device; <br> thus,  <b> a single measurement yields at most a single classical bit of information. Because measurement changes the state, one
+                cannot make two measurements on the original state of a qubit.</b>
+            </p>
+
+            <p class="riquadro">
+                Furthermore, 
+                an unknown quantum state cannot be cloned, which means it is not possible to measure a
+                qubit’s state in two ways, even indirectly by copying the qubit’s state and measuring the copy.
+            </p>
+            <p class="riquadro">
+                Thus, even though a quantum bit can be in infinitely many different superposition states, it is
+                possible to extract only a single classical bit of information from a single quantum bit.            
+            </p>
+
+            <p>
+                inizio pag 18
+            </p>
+
+
+        </article>
+
+        <!-- --------------------------------------------- -->        
+        <!-- --------------------------------------------- -->
+        <hr>
+        <hr>
+        
+    </main>
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>
