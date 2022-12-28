@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Massimo Pasteris">
+    <meta name="description" content="Appunti Personali di Meccanica quantistica da fonti diverse">
+    <title>Appunti di Meccanica Quantistica - Misura</title>
+    <link rel="icon" href="telescope.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- 
+    Per le formule mathjax vedi: 
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+    https://docs.mathjax.org/en/latest/basic/mathematics.html 
+
+    https://www.physicsread.com/latex-ket-notation/
+
+-->
+<body>
+    <head>
+        <h1>I principi della Meccanica Quantistica</h1>
+        <p>
+            Leonard Susskind, Art Friedman - Meccanica quantistica - Pag.40</p>
+        </p>
+    </head>
+    <hr>
+    <main>
+        <article id="matrici">    
+            <h3>Matrici</h3>      
+            <p> 
+                Gli stati sono descritti da vettori in uno spazio vettoriale. <br>
+                Le cose che si possono misurare,  <b>le osservabili</b>, sono descritte tramite
+                operatori lineari.
+
+                $$ osservabili \leftrightarrow  operatori \text{  } lineari $$
+
+                Esempi di osservabili: coordinate, energia, quantità di moto,... <br>
+                Le osservabili sono associate a uno spazio vettoriale, ma non sono vettori di stato
+                Indichiamo un operatore con \( M \) come macchina che agisce su un ket per produrre
+                un altro ket:
+
+                $$ \boldsymbol{M} | A \rangle = | B \rangle   \tag{1}$$
+                alcune proprietà:
+                $$ \boldsymbol{M} z | A \rangle = z| B \rangle  $$
+                $$ \boldsymbol{M} (| A \rangle + | B \rangle)=\boldsymbol{M} | A \rangle + \boldsymbol{M}| B \rangle   $$
+
+                Rappresentiamo \(  | A \rangle \) e \(  | B \rangle \)  con una base \(  | j \rangle \):
+
+                $$   | A \rangle = \sum_{j=1}^N  \alpha_j |j \rangle  $$
+                $$   | B \rangle = \sum_{j=1}^N  \beta_j |j \rangle  $$
+
+                Sostituiamo nella (1)
+                $$    \sum_{j=1}^N  \boldsymbol{M} \alpha_j |j \rangle = \sum_{j=1}^N  \beta_j |j \rangle $$
+
+                Vediamo la proiezione lungo un versore \(  | k \rangle \). Facciamo quindi il prodotto
+                interno con  \(   \langle k | \):
+                $$    \sum_{j=1}^N  \langle k | \boldsymbol{M} |j \rangle \alpha_j = \sum_{j=1}^N  \beta_j \langle k |j \rangle \tag{2} \\
+                        \langle k |j \rangle = 0 \text{ se  }  k \neq j  \\
+                        \langle k |j \rangle = 1 \text{ se  }  k = j
+                $$
+
+                Il <b> secondo membro </b> della (2) diventa:
+                
+                $$ \sum_{j=1}^N  \beta_j \langle k |j \rangle =\beta_k $$
+                
+                Vediamo il <b> primo membro </b> della (2)
+
+                $$  \langle k | \boldsymbol{M} |j \rangle  $$
+                \(   \boldsymbol{M} |j \rangle \) produce un ket \(   \boldsymbol{M} |j \rangle =   |t \rangle \)
+
+                $$  \langle k | \boldsymbol{M} |j \rangle =   \langle k | t \rangle = m_{kj} = \text{ numero complesso  } $$
+
+                I termini \(  m_{kj} \) sono gli elementi di una matrice quadrata, ad esempio se N=3
+
+                $$
+
+                \boldsymbol{M}  =
+                \begin{pmatrix}
+                                m_{11} \
+                                m_{12} \
+                                m_{13} \ \\
+                                m_{21} \
+                                m_{22} \
+                                m_{23} \ \\
+                                m_{31} \
+                                m_{32} \
+                                m_{33} \ \\
+
+                \end{pmatrix}
+                $$
+
+                La (2) diventa quindi:
+                $$    \sum_{j=1}^N   m_{kj} \alpha_j = \beta_k   $$
+                
+                Il prodotto della matrice M per il ket \(  | A \rangle \) , da un ket le cui componenti sono
+                \(  \beta_k  \)  ad esempio:
+
+                $$               
+                    \begin{pmatrix}
+                                    m_{11} \
+                                    m_{12} \
+                                    m_{13} \ \\
+                                    m_{21} \
+                                    m_{22} \
+                                    m_{23} \ \\
+                                    m_{31} \
+                                    m_{32} \
+                                    m_{33} \ \\
+                    \end{pmatrix}
+                    \begin{pmatrix}
+                        \alpha_1 \\
+                        \alpha_2 \\
+                        \alpha_3  \\                    
+                    \end{pmatrix} =
+
+                    \begin{pmatrix}
+                        \beta_1 \\
+                        \beta_2 \\
+                        \beta_3  \\                    
+                    \end{pmatrix} 
+                $$
+
+                $$
+                    \beta_1=  m_{11} \alpha_1 + m_{12} \alpha_2+ m_{13} \beta_3 \\
+                    \beta_2=  m_{21} \alpha_1 + m_{22} \alpha_2+ m_{23} \alpha_3 \\
+                    \beta_3=  m_{31} \alpha_1 + m_{32} \alpha_2+ m_{33} \alpha_3 
+                $$
+
+                $$
+                    \begin{pmatrix}
+                        \beta_1 \\
+                        \beta_2 \\
+                        \beta_3  \\                    
+                    \end{pmatrix} =
+
+                    \begin{pmatrix}
+                        m_{11} \\  
+                        m_{21} \\
+                        m_{31} \\
+                    \end{pmatrix} \alpha_1 +
+
+                    \begin{pmatrix}
+                        m_{12} \\  
+                        m_{22} \\
+                        m_{32} \\
+                    \end{pmatrix} \alpha_2 +
+
+                    \begin{pmatrix}
+                        m_{13} \\  
+                        m_{23} \\
+                        m_{33} \\
+                    \end{pmatrix} \alpha_3 
+                $$
+
+
+            </p>
+
+
+        
+    
+
+            
+        </article>
+
+        <article id="autovaloriAutovettori">    
+            <h3>Autovalori Autovettori Operatori Lineari</h3>      
+            <p> 
+                Quando un operatore agisce su un vettore in ingresso, la direzione del vettore in uscita
+                in generale cambia, ma esistono particolòari vettori per cui la direzione non cambia, 
+                questi vettori si chiamano <b> autiovettori</b>:
+
+                $$ \boldsymbol{M} | l \rangle = \lambda | l \rangle   \\
+
+                \lambda    \text{   autovalore }\\
+                | l \rangle    \text{   autovettore }
+                $$
+            
+                esempio
+                $$ M=
+                \begin{pmatrix}
+                0 & -1 \\  
+                1 & 0 \\
+                \end{pmatrix} \\
+
+                l=   \begin{pmatrix}
+                1  \\  
+                i \\
+                \end{pmatrix} \\
+
+                \lambda = -i  \\
+
+                \begin{pmatrix}
+                0 & -1 \\  
+                1 & 0 \\
+                \end{pmatrix} 
+                \begin{pmatrix}
+                1  \\  
+                i \\
+                \end{pmatrix} =
+
+                1 \begin{pmatrix}
+                0  \\  
+                1  \\
+                \end{pmatrix} +
+                i \begin{pmatrix}
+                -1 \\  
+                0 \\
+                \end{pmatrix} =
+                \begin{pmatrix}
+                -i\\  
+                1\\
+                \end{pmatrix} =
+                (-i)\begin{pmatrix}
+                1  \\  
+                i \\
+                \end{pmatrix} 
+
+                $$
+
+            </p>        
+        </article>
+
+        <article id="coniugazioneHermitiana">    
+            <h3>Coniugazione Hermitiana</h3>      
+            <p> 
+                $$ \boldsymbol{M} | A \rangle = | B \rangle   $$
+
+                $$    \sum_{i=1}^N  m_{ji} \alpha_i  =   \beta_j  $$
+                prendiamo il complesso coniugato
+                $$    \sum_{i=1}^N  m_{ji}^* \alpha_i^*  =   \beta_j^*  $$
+
+                Proviamo a scrivere il prodotto matriciale usando i bra al posto dei ket. <br>
+                \( | A \rangle \) diventa un bra complesso coniugato passa da colonna riga. <br>
+                Le sue componenti ora moltiplicano le righe quindi:
+
+                $$      
+                
+                \begin{pmatrix}
+                \alpha_1^* & \alpha_2^* &   \alpha_3^*  \\                    
+                \end{pmatrix} 
+                \begin{pmatrix}
+                                m_{11}^* \
+                                m_{21}^* \
+                                m_{31}^* \ \\
+                                m_{12}^* \
+                                m_{22}^* \
+                                m_{32}^* \ \\
+                                m_{13}^* \
+                                m_{23}^* \
+                                m_{33}^* \ \\
+                \end{pmatrix} =
+    
+                \langle A |   \boldsymbol{M}^{\dagger}   
+            
+                $$
+                L'hermitiana è la colplessa coniugata della trasposta:
+
+                $$
+
+                \boldsymbol{M}^{\dagger}   = [ \boldsymbol{M}^{T} ]^*
+                    
+                $$
+                
+                Dunque:
+
+                $$ 
+                \boldsymbol{M} | A \rangle = | B \rangle   \\
+                \langle A |  \boldsymbol{M}^{\dagger}    = \langle B |                
+                $$
+
+                Le osservabili sono rappresentate da operatori lineari che coincidono
+                con il proprio coniugato hermitiano: operatori hermitiani. Un pò come
+                un numero reale è uguale al suo complesso coniugato. <br>
+                Gli operatori hermitiani soddisfano la proprietà:
+                $$
+                \boldsymbol{M} =   \boldsymbol{M}^{\dagger}  \\
+                m_{ij}=m_{ji}^*
+                $$
+                Gli operatori hermitiani godono di alcune proprietà. Una molto importante
+                èla seguente: <br>
+                <b> gli autovalori di operatori hermitiani sono reali </b>
+            </p>        
+        </article>
+        
+pag 48  dimostriamolo
+
+        <!-- --------------------------------------------- -->        
+        <!-- --------------------------------------------- -->
+        <hr>
+        <hr>
+
+        
+    </main>
+
+
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
+    
+</body>
